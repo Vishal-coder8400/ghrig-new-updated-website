@@ -1,0 +1,425 @@
+@import "tailwindcss";
+
+
+/* =========================
+   BRAND GRADIENT
+   ========================= */
+.bg-brand-gradient {
+  background: linear-gradient(90deg,
+      #8E2C6D,
+      #7A3FA2,
+      #4B4DB5);
+}
+
+
+@font-face {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  src: url('../public/assets/fonts/jakarta_sans/PlusJakartaSans-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../public/assets/fonts/inter/Inter-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../public/assets/fonts/pro_display/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+.font_family_display {
+  font-family: 'SF Pro Display';
+
+}
+
+.font_family_jakarta {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.font_family_inter {
+  font-family: "Inter", sans-serif;
+
+}
+
+.Accelerate_job {
+  background-image: url("../public/assets/images/accelrate-your-job.png");
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 23px;
+}
+
+
+.slick-slide img {
+  width: 100px !important;
+  height: 50% !important;
+}
+
+.bg-section-mobile {
+  background-image: url("../public/assets/images/banner-main-mobile.png");
+  height: 109vh;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-banner-about {
+  background-image: url("../public/assets/images/about-us-banner-new1.png");
+  height: 63vh;
+  border-radius: 23px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+}
+
+.hero-wrapper {
+  width: 100%;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+
+  background-image: url("/assets/images/banner-new-updated1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  /* FIX CROPPING */
+
+  height: 950px;
+  /* FIX HEIGHT */
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero-wrapper-mobile {
+    background-image: url("/assets/images/banner-main-mobile1.png") !important;
+    background-size: cover;
+    background-position: center top;
+    height: 110vh;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .Accelerate_job {
+    background-image: url("../public/assets/images/accerate-mobile.png") !important;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 23px;
+  }
+
+  .bg-section-mobile {
+    background-position: 0 -240px;
+    height: 92vh;
+  }
+
+  .bg-banner-about {
+    background-image: url("../public/assets/images/about-mobile-new1.png") !important;
+    height: 23vh;
+    margin: 8px;
+  }
+
+  #mobile_nav {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+
+  }
+}
+
+@media screen and (max-width:1050px) and (min-width:600px) {
+  .bg-section {
+
+    height: 529px;
+  }
+
+  div#fifth {
+    top: 45%;
+  }
+
+  div#sixth {
+    top: 58%;
+    height: 34%;
+  }
+
+  div#third {
+    top: 58%;
+    height: 33%;
+  }
+
+  div#second {
+    top: 62%;
+    height: 30%;
+  }
+
+  div#first {
+    top: 41%;
+    height: 24%;
+    left: 24px;
+  }
+
+  .mt-5.flex.flex-col.sm\:flex-row.border-2.bg-\[\#f6f6f6\].border-gray-300.rounded-lg.p-4.sm\:p-8 {
+    flex-direction: column;
+    padding: 7px;
+  }
+
+  .card2 {
+
+    height: 5vh;
+  }
+
+  .card1 {
+
+    height: 5vh;
+  }
+
+  .card3 {
+
+    height: 5vh;
+  }
+
+  .bg-section {
+    background-position: 0;
+  }
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* Service Banner Layout */
+.service-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  min-height: 600px;
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 1023px) {
+  .service-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .service-left {
+    /* max-w: full; */
+  }
+
+  .service-right {
+    display: none !important;
+  }
+}
+
+
+/* ==== IMAGE WRAPPER ==== */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  /* same as before */
+  height: 480px;
+  /* keep your fixed height */
+  border-radius: 20px;
+  overflow: hidden;
+  /* cuts anything that goes outside */
+  /* box-shadow: 0 10px 30px rgba(0,0,0,.08); */
+}
+
+/* ==== CARD (banner1) – stays behind ==== */
+.bg-image {
+  position: absolute;
+  inset: 0;
+  /* fill the wrapper */
+  width: 75%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 1;
+  left: 50px
+    /* behind the character */
+}
+
+/* ==== CHARACTER (banner2) – overlaps from the right ==== */
+.front-image {
+  position: absolute;
+  bottom: 0;
+  /* stick to bottom */
+  right: 305px;
+  /* <-- negative offset = overlap */
+  width: 65%;
+  /* size relative to wrapper */
+  max-width: 500px;
+  height: 500px;
+  z-index: 2;
+  /* in front of the card */
+  pointer-events: none;
+  transform: translateY(12px);
+  /* tiny lift so it looks “on top” */
+}
+
+/* Dots Animation (optional) */
+.service-dots .dot {
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1500px) {
+  .heading {
+    font-size: 57px !important;
+    margin-top: -14px !important;
+    line-height: 52px !important;
+  }
+}
+
+/* ============================
+   INFINITE SCROLL ANIMATION
+   ============================ */
+
+@keyframes sectorScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Outer wrapper hides overflow */
+.sector-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Animated moving row */
+.sector-marquee {
+  display: flex;
+  width: max-content;
+  /* expands based on children */
+  gap: 24px;
+  /* spacing between cards */
+  animation: sectorScroll 18s linear infinite;
+}
+
+/* Prevent text selection while scrolling */
+.sector-marquee button {
+  user-select: none;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* =========================
+   SWIPER ARROWS – BRAND GRADIENT
+   ========================= */
+
+/* =========================
+   SWIPER ARROWS – FINAL FIX
+   ========================= */
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 34px;
+  /* size (adjust if needed) */
+  height: 34px;
+  border-radius: 9999px;
+
+  background: linear-gradient(90deg,
+      #8E2C6D,
+      #7A3FA2,
+      #4B4DB5);
+
+  box-shadow: 0 6px 14px rgba(122, 63, 162, 0.3);
+
+  /* arrow color */
+  color: #ffffff !important;
+
+  /* POSITION FIX (no jumping) */
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  margin-top: 0 !important;
+}
+
+/* Arrow icon size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+/* Reduce arrow button size */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 34px !important;
+  height: 34px !important;
+  background: linear-gradient(135deg, #7b2f4e, #5f3f73);
+  border-radius: 50%;
+}
+
+/* Reduce arrow icon size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px !important;
+  font-weight: 700;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 22s linear infinite;
+}
+
+
+/* Swiper pagination - Tailwind way */
+/* =========================
+   FORCE SWIPER DOTS TO WHITE
+   ========================= */
+
+/* Override Swiper theme color */
+.swiper {
+  --swiper-theme-color: #ffffff;
+}
+
+/* Pagination bullets */
+.swiper-pagination-bullet {
+  @apply bg-white/50 opacity-100;
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+  @apply bg-white;
+}

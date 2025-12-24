@@ -1,0 +1,222 @@
+import React from "react";
+import Image from "next/image";
+import contact_img from "../../public/assets/images/contact_img.png";
+import email from "../../public/assets/images/email.png";
+
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+
+export default function SectionForm() {
+  return (
+    <div className="w-full bg-white flex justify-center">
+      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 py-6 md:py-10 px-4">
+        {/* LEFT FORM SECTION */}
+        <div className="bg-[#FAFAFA] w-full p-6 sm:p-8 md:p-10 rounded-xl">
+         <h2 className="mt-0 text-start text-black sm:leading-16 font-medium sm:text-[54px] leading-[44px] text-[20px] font_family_jakarta">
+
+            We're always excited to hearfrom you!
+          </h2>
+
+          <p className="mt-8 text-black font-normal text-[16px] text-start">
+            {" "}
+            We’d love to hear from you! Whether you have questions, need assistance, or just want to say hello, feelfree to reach out. Our team is always ready to help.{" "}
+          </p>
+
+          <hr className="my-8" />
+
+          {/* FORM */}
+          <form className="space-y-6">
+            {/* First & Last Name */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="flex flex-col space-y-2">
+                <label
+                  className="text-[14px] font-medium leading-[24px] text-[#20102B] font_family_inter
+"
+                >
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. Jason Wild"
+                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+
+              <div className="flex flex-col space-y-2">
+                <label className="text-[14px] font-medium leading-[24px] text-[#20102B] font_family_inter">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. Jason Wild"
+                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex flex-col space-y-2">
+              <label
+                className="text-[14px] font-medium leading-[24px] text-[#20102B] font_family_inter
+"
+              >
+                E-mail Address
+              </label>
+              <input
+                type="email"
+                placeholder="E-mail ID"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+            </div>
+
+            {/* Message */}
+            <div className="flex flex-col space-y-2">
+              <label
+                className="text-[14px] font-medium leading-[24px] text-[#20102B] font_family_inter
+"
+              >
+                Message
+              </label>
+              <textarea
+                rows="5"
+                placeholder="Write your message to us here"
+                className="px-4 py-2 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+            </div>
+
+          {/* Buttons */}
+<div className="flex justify-center mt-6 sm:mt-8 gap-2 flex-wrap">
+  
+  <button
+    className="
+      relative
+      text-[13px] sm:text-[15px]
+      text-white
+      px-4 sm:px-5
+      py-2.5 sm:py-3
+      rounded-[100px]
+      font-semibold
+      font_family_display
+      overflow-hidden
+      shadow-[0_10px_25px_rgba(0,0,0,0.12)]
+    "
+  >
+    {/* BASE GRADIENT */}
+    <span
+      className="
+        absolute inset-0
+        rounded-[100px]
+        bg-gradient-to-r
+        from-[#BC263A]
+        to-[#004A8F]
+      "
+    />
+
+    {/* PURPLE SOFT OVERLAY */}
+    <span
+      className="
+        absolute inset-0
+        rounded-[100px]
+        bg-[linear-gradient(90deg,rgba(122,46,108,0.65),rgba(75,47,107,0.65))]
+      "
+    />
+
+    {/* INNER BORDER */}
+    <span
+      className="
+        absolute inset-0
+        rounded-[100px]
+        border border-[rgba(142,119,228,0.6)]
+      "
+    />
+
+    {/* CONTENT */}
+    <span className="relative z-10">
+      Join the Movement
+    </span>
+  </button>
+
+  <button
+    className="
+      text-[13px] sm:text-[15px]
+      px-4 sm:px-5
+      py-2.5 sm:py-3
+      rounded-[100px]
+      font-semibold
+      font_family_display
+      text-black
+      bg-white
+      border
+      hover:bg-[#8E77E4]/5
+      transition
+    "
+  >
+    Explore Roles
+  </button>
+
+</div>
+          </form>
+        </div>
+
+        {/* RIGHT SECTION */}
+        <div className="flex flex-col gap-6">
+          <Image
+            src={contact_img}
+            height={600}
+            width={550}
+            alt="contact image"
+            className="rounded-xl object-cover"
+          />
+
+          <div className="bg-[#FAFAFA] rounded-xl p-10 space-y-6">
+    <p
+  className="
+    font-bold tracking-wide
+    bg-gradient-to-r from-[#BC263A] to-[#004A8F]
+    bg-clip-text text-transparent
+  "
+>
+  GET IN TOUCH
+</p>
+
+
+      <div className="bg-white gap-4 flex items-center shadow-sm rounded-lg p-4">
+        <div className="bg-gradient-to-r from-[#BC263A] to-[#004A8F] text-white p-3 rounded-full">
+          <FiMail size={20} />
+        </div>
+        <div>
+          <p className="font-[500] text-[16px] text-black">E-mail</p>
+          <p className="font-[500] text-[15px] text-[#7C7C7C]">
+            contactus@ghrlig.com
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-white gap-4 flex items-center shadow-sm rounded-lg p-4">
+        <div className="bg-gradient-to-r from-[#BC263A] to-[#004A8F] text-white p-3 rounded-full">
+          <FiMapPin size={20} />
+        </div>
+        <div>
+          <p className="font-[500] text-[16px] text-black">Address</p>
+          <p className="font-[500] text-[15px] text-[#7C7C7C]">
+            1901 Thornridge Cir. Shiloh, Hawaii 81063
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-white gap-4 flex items-center shadow-sm rounded-lg p-4">
+        <div className="bg-gradient-to-r from-[#BC263A] to-[#004A8F] text-white p-3 rounded-full">
+          <FiPhone size={20} />
+        </div>
+        <div>
+          <p className="font-[500] text-[16px] text-black">Phone</p>
+          <p className="font-[500] text-[15px] text-[#7C7C7C]">
+            +1 (999) 999-99-99
+          </p>
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  );
+}

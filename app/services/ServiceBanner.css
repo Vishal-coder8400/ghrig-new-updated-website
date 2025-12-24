@@ -1,0 +1,117 @@
+/* -------------------------------------------------
+   ServiceBanner.css  –  NO @tailwind imports!
+   ------------------------------------------------- */
+
+/* -------------------------------------------------
+   CUSTOM FONTS (keep them here OR move to globals.css)
+   ------------------------------------------------- */
+@font-face {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  src: url("../public/assets/fonts/jakarta_sans/PlusJakartaSans-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../public/assets/fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../public/assets/fonts/pro_display/SFPRODISPLAYREGULAR.OTF")
+    format("opentype");
+  font-weight: 700;
+}
+
+/* -------------------------------------------------
+   LAYOUT
+   ------------------------------------------------- */
+.service-banner {
+  @apply flex flex-col md:flex-row items-center justify-between
+         px-6 py-12 md:py-20 gap-8 md:gap-12 bg-white;
+}
+
+/* LEFT */
+.service-left {
+  @apply flex-1 max-w-xl;
+}
+.service-badge {
+  @apply inline-block px-3 py-1 mb-4
+         text-xs font-medium tracking-wider uppercase
+         text-purple-700 bg-purple-100 rounded-full;
+}
+.service-title {
+  @apply text-4xl md:text-5xl font-bold text-gray-900
+         leading-tight mb-3;
+}
+.service-subtext {
+  @apply text-lg text-gray-600 mb-6;
+}
+.service-buttons {
+  @apply flex flex-col sm:flex-row gap-3 mb-8;
+}
+.btn-primary {
+  @apply px-6 py-3 text-white bg-purple-600 rounded-lg
+         font-medium hover:bg-purple-700 transition;
+}
+.btn-outline {
+  @apply px-6 py-3 border border-purple-600 text-purple-600 rounded-lg
+         font-medium hover:bg-purple-50 transition;
+}
+.service-dots {
+  @apply flex gap-2;
+}
+.dot {
+  @apply w-2 h-2 rounded-full bg-gray-300 transition-colors;
+}
+.dot.active {
+  @apply bg-purple-600;
+}
+
+/* RIGHT – IMAGE LAYERING */
+.service-right {
+  @apply flex-1 flex justify-center md:justify-end;
+}
+.image-wrapper {
+  @apply relative w-full max-w-md md:max-w-lg
+         h-80 md:h-96 overflow-hidden
+         rounded-2xl shadow-xl;
+}
+.bg-image {
+  @apply absolute inset-0 w-full h-full object-cover rounded-2xl;
+}
+.front-image {
+  @apply absolute bottom-4 right-4
+         w-52 md:w-64 pointer-events-none z-10;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------- */
+@media (max-width: 768px) {
+  .service-banner {
+    @apply flex-col text-center px-4 py-10;
+  }
+  .service-left {
+    @apply max-w-none;
+  }
+  .image-wrapper {
+    @apply h-64 max-w-xs mx-auto;
+  }
+  .front-image {
+    @apply w-44 bottom-3 right-3;
+  }
+}
+@media (max-width: 480px) {
+  .service-title {
+    @apply text-3xl;
+  }
+  .image-wrapper {
+    @apply h-56;
+  }
+  .front-image {
+    @apply w-36 bottom-2 right-2;
+  }
+  .btn-primary,
+  .btn-outline {
+    @apply w-full text-center;
+  }
+}
