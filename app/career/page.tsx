@@ -170,17 +170,18 @@ export default function CareerPage() {
       </div>
 
       <div className="w-[220px] sm:w-[280px] lg:w-[330px] xl:w-[380px] mx-auto self-start">
-  <div className="relative w-[220px] sm:w-[280px] lg:w-[330px] xl:w-[380px] mx-auto">
+ <div className="relative w-[220px] sm:w-[280px] lg:w-[330px] xl:w-[380px] mx-auto">
   <div className="relative aspect-[9/4] flex items-start">
     <Image
       src="/assets/images/careerlogo5.png"
       alt="Career Illustration"
       fill
-      className="object-contain object-top"
+      className="object-contain object-top translate-y-4 scale-110"
       priority
     />
   </div>
 </div>
+
 
 
 
