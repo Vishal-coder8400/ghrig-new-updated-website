@@ -145,17 +145,25 @@ export const FaqSection = () => {
       <div className="max-w-[1152px] mx-auto px-4 flex flex-col lg:flex-row gap-10 lg:gap-[72px]">
         {/* LEFT CONTENT */}
         <div className="max-w-full lg:max-w-[420px]">
-          <h2
-            className="
-            text-[26px] sm:text-[30px] lg:text-[36px]
-            font-semibold
-            leading-[34px] sm:leading-[40px] lg:leading-[44px]
-            tracking-[-1.2px]
-            text-black
-          "
-          >
-            Frequently Asked Question
-          </h2>
+         <h2
+  className="
+    text-[26px] sm:text-[30px] lg:text-[36px]
+    font-semibold
+    tracking-[-1.2px]
+    text-center
+    leading-tight sm:leading-snug lg:leading-[1.2]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  Frequently Asked Question
+</h2>
+
 
           <p className="mt-4 text-[14px] sm:text-[15px] lg:text-[16px] leading-[22px] sm:leading-[24px] text-[#141414b2]">
             You can return any item within 30 days of purchase as long as it's

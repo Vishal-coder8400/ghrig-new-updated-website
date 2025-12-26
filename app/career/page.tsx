@@ -69,220 +69,269 @@ export default function CareerPage() {
   };
 
   return (
-    <section className="py-10 flex justify-center">
+    <section className="py-10 flex justify-center bg-[#F5F2FF]">
       <div className="max-w-3xl w-full px-6">
 
         {/* ✅ Heading */}
         <div className="text-center mb-12 px-5">
-          <h1 className="text-xl sm:text-xxl lg:text-3xl font-bold text-gray-900 leading-tight font_family_jakarta">
-            We're always excited to hear from you!
-          </h1>
+        <h1
+  className="
+    text-xl sm:text-xxl lg:text-3xl
+    font-bold
+    font_family_jakarta
+    leading-tight sm:leading-[1.2]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  We're always excited to hear from you!
+</h1>
+
           <p className="text-gray-600 mt-3 text-md max-w-2xl mx-auto">
             We’d love to hear from you! Whether you have questions, need assistance, or just want to say hello, feel free to reach out. Our team is always ready to help.
           </p>
         </div>
 
         {/* ✅ Styled Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-          <h2
-            className="
-    text-3xl
-    font-bold
-    text-center
-    mb-8
-    bg-gradient-to-r
-    from-[#BC263A]
-    to-[#004A8F]
-    bg-clip-text
-    text-transparent
+    <div
+  className="
+    rounded-2xl
+    shadow-xl
+    p-8
+    bg-gradient-to-br
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
   "
-          >
-            Apply Now
-          </h2>
+>
+
+  <h2 className="text-3xl font-bold text-center mb-8 text-white">
+  Apply Now
+</h2>
 
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+  <form className="space-y-6" onSubmit={handleSubmit}>
 
-            {/* ✅ Full Name + Email + Logo */}
-            <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr] gap-6 items-center">
-              <div className="space-y-5">
+    {/* ✅ Full Name + Email + Logo */}
+  <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr] gap-6 items-start">
+      <div className="space-y-5">
 
-                {/* Full Name */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Full Name*</label>
-                  <input
-                    name="fullName"
-                    required
-                    value={form.fullName}
-                    onChange={handleChange}
-                    className="w-full border rounded-lg px-3 py-3 mt-1 focus:ring-2 outline-none focus:ring-[#0A1B6F50]"
-                    placeholder="Enter your name"
-                  />
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Email*</label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    value={form.email}
-                    onChange={handleChange}
-                    className="w-full border rounded-lg px-3 py-3 mt-1 focus:ring-2 outline-none focus:ring-[#0A1B6F50]"
-                    placeholder="Enter your email"
-                  />
-                </div>
-              </div>
-              <div className="w-[220px] sm:w-[280px] lg:w-[330px] xl:w-[380px] mx-auto self-start">
-                <Image
-                  src="/assets/images/careerlogo4.png"
-                  alt="Career Illustration"
-                  width={900}
-                  height={500}
-                  className="object-contain w-full h-auto scale-90 translate-y-2"
-                  priority
-                />
-              </div>
-
-
-
-
-            </div>
-
-            {/* ✅ Pin + Phone */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Pin Code*</label>
-                <input
-                  name="pin"
-                  required
-                  value={form.pin}
-                  onChange={handleChange}
-                  className="w-full border rounded-lg px-3 py-3 mt-1 focus:ring-2 outline-none focus:ring-[#0A1B6F50]"
-                  placeholder="Enter pin code"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Phone Number*</label>
-                <input
-                  name="phone"
-                  required
-                  value={form.phone}
-                  onChange={handleChange}
-                  className="w-full border rounded-lg px-3 py-3 mt-1 focus:ring-2 outline-none focus:ring-[#0A1B6F50]"
-                  placeholder="Enter phone number"
-                />
-              </div>
-            </div>
-
-            {/* ✅ Address */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Address*</label>
-              <input
-                name="address"
-                required
-                value={form.address}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-3 py-3 mt-1 focus:ring-2 outline-none focus:ring-[#0A1B6F50]"
-                placeholder="Enter your address"
-              />
-            </div>
-
-            {/* ✅ Message */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Message (Optional)</label>
-              <textarea
-                name="message"
-                rows={4}
-                value={form.message}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-3 py-3 mt-1 focus:ring-2 outline-none focus:ring-[#0A1B6F50]"
-                placeholder="Write message..."
-              ></textarea>
-            </div>
-
-            {/* ✅ File Upload */}
-            <div>
-              <label className="block text-sm mb-1 font-medium">Upload CV / Resume</label>
-              <input
-                type="file"
-                accept=".pdf,.doc,.docx"
-                onChange={(e) => setCv(e.target.files?.[0] ?? null)}
-              />
-              {cv && (
-                <div className="text-sm mt-1 text-gray-600">{cv.name}</div>
-              )}
-            </div>
-
-            {/* ✅ Submit button */}
-            <button
-              type="submit"
-              disabled={loading}
-              className="
-    relative
+        {/* Full Name */}
+        <div>
+          <label className="block text-sm font-medium text-white">Full Name*</label>
+         <input
+  name="fullName"
+  required
+  value={form.fullName}
+  onChange={handleChange}
+  className="
     w-full
-    flex items-center justify-center
-    h-[56px]                /* matches your original py-4 */
+    bg-white
+    border
     rounded-lg
-    text-white text-lg
+    px-3 py-3 mt-1
+    outline-none
+    focus:ring-2
+    focus:ring-white/60
+  "
+  placeholder="Enter your name"
+/>
+
+        </div>
+
+        {/* Email */}
+        <div>
+         <label className="block text-sm font-medium text-white">Email*</label>
+         <input
+  type="email"
+  name="email"
+  required
+  value={form.email}
+  onChange={handleChange}
+  className="
+    w-full
+    bg-white
+    border
+    rounded-lg
+    px-3 py-3 mt-1
+    outline-none
+    focus:ring-2
+    focus:ring-white/60
+  "
+  placeholder="Enter your email"
+/>
+
+        </div>
+      </div>
+
+      <div className="w-[220px] sm:w-[280px] lg:w-[330px] xl:w-[380px] mx-auto self-start">
+  <div className="relative w-[220px] sm:w-[280px] lg:w-[330px] xl:w-[380px] mx-auto">
+  <div className="relative aspect-[9/4] flex items-start">
+    <Image
+      src="/assets/images/careerlogo5.png"
+      alt="Career Illustration"
+      fill
+      className="object-contain object-top"
+      priority
+    />
+  </div>
+</div>
+
+
+
+      </div>
+    </div>
+
+    {/* ✅ Pin + Phone */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div>
+       <label className="block text-sm font-medium text-white">Pin Code*</label>
+        <input
+          name="pin"
+          required
+          value={form.pin}
+          onChange={handleChange}
+          className="
+    w-full
+    bg-white
+    border
+    rounded-lg
+    px-3 py-3 mt-1
+    outline-none
+    focus:ring-2
+    focus:ring-white/60
+  "
+          placeholder="Enter pin code"
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-white">Phone Number*</label>
+        <input
+          name="phone"
+          required
+          value={form.phone}
+          onChange={handleChange}
+         className="
+    w-full
+    bg-white
+    border
+    rounded-lg
+    px-3 py-3 mt-1
+    outline-none
+    focus:ring-2
+    focus:ring-white/60
+  "
+          placeholder="Enter phone number"
+        />
+      </div>
+    </div>
+
+    {/* ✅ Address */}
+    <div>
+     <label className="block text-sm font-medium text-white">Address*</label>
+      <input
+        name="address"
+        required
+        value={form.address}
+        onChange={handleChange}
+        className="
+    w-full
+    bg-white
+    border
+    rounded-lg
+    px-3 py-3 mt-1
+    outline-none
+    focus:ring-2
+    focus:ring-white/60
+  "
+        placeholder="Enter your address"
+      />
+    </div>
+
+    {/* ✅ Message */}
+    <div>
+      <label className="block text-sm font-medium text-white">Message (Optional)</label>
+      <textarea
+        name="message"
+        rows={4}
+        value={form.message}
+        onChange={handleChange}
+        className="
+    w-full
+    bg-white
+    border
+    rounded-lg
+    px-3 py-3 mt-1
+    outline-none
+    focus:ring-2
+    focus:ring-white/60
+  "
+        placeholder="Write message..."
+      ></textarea>
+    </div>
+
+    {/* ✅ File Upload */}
+    <div>
+     <label className="block text-sm font-medium text-white">Upload CV / Resume</label>
+      <input
+        type="file"
+        accept=".pdf,.doc,.docx"
+        onChange={(e) => setCv(e.target.files?.[0] ?? null)}
+      />
+      {cv && (
+        <div className="text-sm mt-1 text-gray-600">{cv.name}</div>
+      )}
+    </div>
+
+    {/* ✅ Submit button */}
+   <button
+  type="submit"
+  disabled={loading}
+  className="
+    w-full
+    h-[56px]
+    flex items-center justify-center
+    gap-2
+    bg-white
+    rounded-full
+    text-[18px]
     font-semibold
-    overflow-hidden
-    transition
+    text-[#7A3FA2]
+    transition-all duration-300
+    hover:bg-white/90
     disabled:opacity-60
     disabled:cursor-not-allowed
   "
-            >
-              {/* BASE GRADIENT */}
-              <span
-                className="
-      absolute inset-0
-      bg-gradient-to-r
-      from-[#BC263A]
-      to-[#004A8F]
-    "
-              />
-
-              {/* PURPLE SOFT OVERLAY */}
-              <span
-                className="
-      absolute inset-0
-      bg-[linear-gradient(90deg,rgba(122,46,108,0.65),rgba(75,47,107,0.65))]
-    "
-              />
-
-              {/* INNER BORDER */}
-              <span
-                className="
-      absolute inset-0
-      rounded-lg
-      border border-[rgba(142,119,228,0.6)]
-    "
-              />
-
-              {/* BUTTON TEXT */}
-              <span className="relative z-10">
-                {loading ? "Submitting..." : "Submit Application"}
-              </span>
-            </button>
+>
+  {loading ? "Submitting..." : "Proceed"}
+  {!loading && (
+    <span className="text-[22px] leading-none">›</span>
+  )}
+</button>
 
 
-            {/* ✅ Success / Error Message Below Submit */}
-            {success && (
-              <p className="text-green-700 text-sm bg-green-50 border border-green-200 px-4 py-3 rounded-lg mt-3">
-                {success}
-              </p>
-            )}
+    {/* ✅ Success / Error Message Below Submit */}
+    {success && (
+      <p className="text-green-700 text-sm bg-green-50 border border-green-200 px-4 py-3 rounded-lg mt-3">
+        {success}
+      </p>
+    )}
 
-            {error && (
-              <p className="text-red-700 text-sm bg-red-50 border border-red-200 px-4 py-3 rounded-lg mt-3">
-                {error}
-              </p>
-            )}
+    {error && (
+      <p className="text-red-700 text-sm bg-red-50 border border-red-200 px-4 py-3 rounded-lg mt-3">
+        {error}
+      </p>
+    )}
 
-          </form>
-        </div>
+  </form>
+</div>
+
       </div>
     </section>
   );

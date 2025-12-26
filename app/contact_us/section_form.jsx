@@ -7,14 +7,30 @@ import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 export default function SectionForm() {
   return (
-    <div className="w-full bg-white flex justify-center">
+    <div className="w-full bg-[#F5F2FF] flex justify-center">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 py-6 md:py-10 px-4">
         {/* LEFT FORM SECTION */}
         <div className="bg-[#FAFAFA] w-full p-6 sm:p-8 md:p-10 rounded-xl">
-         <h2 className="mt-0 text-start text-black sm:leading-16 font-medium sm:text-[54px] leading-[44px] text-[20px] font_family_jakarta">
+       <h2
+  className="
+    mt-0
+    text-start
+    font-medium
+    font_family_jakarta
+    text-[20px] sm:text-[54px]
+    leading-tight sm:leading-[1.1]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  We're always excited to hear from you!
+</h2>
 
-            We're always excited to hearfrom you!
-          </h2>
 
           <p className="mt-8 text-black font-normal text-[16px] text-start">
             {" "}

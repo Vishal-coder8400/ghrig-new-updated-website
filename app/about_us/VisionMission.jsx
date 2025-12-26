@@ -69,9 +69,24 @@ export default function VisionMission() {
             "
           />
 
-          <h2 className="text-[40px] font-bold text-black text-center py-2">
-            About Us.
-          </h2>
+   <h2
+  className="
+    text-[40px]
+    font-bold
+    text-center
+    leading-tight
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  About Us.
+</h2>
+
 
           <p className="text-[16px] text-gray-700 leading-[24px]">
             About Us Incepted in 2025 and based out from Noida, gHRig.com is
@@ -138,9 +153,23 @@ export default function VisionMission() {
                 <div>
                   <div className="flex items-center gap-3 mb-3">
                     {item.icon}
-                    <h3 className="text-[22px] font-bold text-black">
-                      {item.title}
-                    </h3>
+                  <h3
+  className="
+    text-[22px]
+    font-bold
+    leading-tight
+    py-0.5
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  {item.title}
+</h3>
+
                   </div>
 
                   <p className="text-[16px] text-gray-700 leading-[24px]">

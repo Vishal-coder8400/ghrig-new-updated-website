@@ -11,12 +11,27 @@ export default function our_story() {
             <Image src={origin_story} alt="" height={400} width={400} />
           </div>
           <div className="flex flex-col justify-center items-center h-100 col-span-1">
-            <h2 className="text-start sm:text-center text-black sm:leading-16 font-medium sm:text-[64px] leading-[44px] text-[39px] font_family_jakarta">
-              {" "}
-              Our Origin Story: <br className="hidden lg:block" />
-              Built For the Real
-              <br className="hidden lg:block" /> World
-            </h2>
+         <h2
+  className="
+    text-start sm:text-center
+    font-medium
+    font_family_jakarta
+    text-[39px] sm:text-[64px]
+    leading-tight sm:leading-[1.1]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  Our Origin Story: <br className="hidden lg:block" />
+  Built For the Real
+  <br className="hidden lg:block" /> World
+</h2>
+
             <p className="mt-4 text-[#141414B2] text-start sm:text-end font-medium text-[16px] font_family_display">
               gHRig started as a student project to fix outdated hiring systems{" "}
               <br className="hidden lg:block" />— now, it’s a growing platform

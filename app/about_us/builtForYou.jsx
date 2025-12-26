@@ -42,9 +42,24 @@ const BuiltForYou = () => {
     <section className="w-full bg-[#F5F2FF] py-16 px-6">
       {/* Header */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mb-14 text-center md:text-left">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mx-auto md:mx-0">
-          Built for you, <br /> to serve you.
-        </h2>
+      <h2
+  className="
+    text-4xl md:text-5xl
+    font-bold
+    mx-auto md:mx-0
+    leading-tight md:leading-[1.2]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  Built for you, <br /> to serve you.
+</h2>
+
 
         <div className="md:w-[50%] text-gray-600 text-lg mt-6 md:mt-0 mx-auto md:mx-0 md:text-right">
           <p>

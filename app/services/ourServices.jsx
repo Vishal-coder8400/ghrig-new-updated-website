@@ -81,9 +81,24 @@ const OurServices = () => {
 
         {/* HEADER */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#141414]">
-            Our Services
-          </h2>
+       <h2
+  className="
+    text-4xl md:text-5xl
+    font-bold
+    leading-tight md:leading-[1.2]
+    py-1
+    text-center
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  Our Services
+</h2>
+
           <p className="text-[#141414B2] text-base leading-relaxed md:text-right">
             "gHRig People Solutions" has a clear cut Vision, Capability and
             Expertise to provide entire bouquet of HR Services before its

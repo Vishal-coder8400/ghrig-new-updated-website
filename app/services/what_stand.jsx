@@ -49,10 +49,26 @@ export default function what_stand() {
       <div className="flex justify-center px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl w-full py-20">
           <div>
-             <h2 className="sm:text-start text-start text-black sm:leading-16 font-medium sm:text-[64px] leading-[44px] text-[39px] font_family_jakarta">
-              What We <br className="hidden lg:block" />
-              Stand For{" "}
-            </h2>
+            <h2
+  className="
+    text-start sm:text-start
+    font-medium
+    font_family_jakarta
+    text-[39px] sm:text-[64px]
+    leading-tight sm:leading-[1.1]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  What We <br className="hidden lg:block" />
+  Stand For
+</h2>
+
           </div>
           <div>
             <p className="text-[#141414B2] mt-3 md:text-right text-[16px] font-medium font_family_display">

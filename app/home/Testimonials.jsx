@@ -57,9 +57,24 @@ export default function TestimonialsSection() {
       {/* Header */}
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 px-4 sm:px-6">
         <div>
-          <h2 className="text-[26px] sm:text-4xl font-bold text-[#0A1445]">
-            Hear from Our Customers
-          </h2>
+    <h2
+  className="
+    text-[26px] sm:text-4xl
+    font-bold
+    leading-tight sm:leading-[1.2]
+    py-1
+    text-center
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  Hear from Our Customers
+</h2>
+
           <p className="text-[14px] sm:text-base text-gray-500 mt-2 max-w-xl">
             Over 2,000 people have already benefited from our all-in-one finance platform.
           </p>

@@ -35,9 +35,27 @@ export const HiringCompaniesWrapperSection = () => {
   return (
     <section className="flex flex-col items-center gap-8 md:gap-12 lg:gap-16 px-4 sm:px-8 md:px-16 py-12 sm:py-16 lg:py-15 w-full bg-white">
       <header className="flex flex-col items-center gap-4 sm:gap-6 md:gap-9 mb-2 sm:mb-2">
-        <h2 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-semibold text-black text-2xl sm:text-3xl md:text-4xl text-center tracking-[-1.80px] leading-7 sm:leading-8 md:leading-9 whitespace-nowrap">
-          We are currently hiring for below sectors
-        </h2>
+ <h2
+  className="
+    [font-family:'Plus_Jakarta_Sans',Helvetica]
+    font-semibold
+    text-2xl sm:text-3xl md:text-4xl
+    text-center
+    tracking-[-1.80px]
+    leading-tight sm:leading-snug md:leading-[1.2]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  We are currently hiring for below sectors
+</h2>
+
+
 
         {/* <p className="max-w-3xl [font-family:'SF_Pro-Regular',Helvetica] font-normal text-[#141414b2] text-sm sm:text-base md:text-base text-center tracking-[-0.48px] leading-5 sm:leading-6">
          

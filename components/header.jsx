@@ -11,17 +11,22 @@ export default function Header() {
   const isHome = pathname === "/" || pathname === "/home";
 
   return (
-    <header
-      className={`
-        w-full top-0 left-0 z-50 text-white
-        py-4
-        ${
-          isHome
-            ? "absolute bg-transparent"
-            : "relative bg-[linear-gradient(180deg,#7B2F4E_0%,#6F365F_32%,#5F3F73_68%,#4B3E6D_100%)]"
-        }
-      `}
-    >
+    <>
+   {/* ✅ Spacer to prevent content hiding */}
+    {/* ✅ Spacer only for NON-home pages */}
+{!isHome && <div className="h-[80px]" />}
+
+ <header
+  className={`
+    w-full top-0 left-0 z-50 text-white py-4
+    ${
+      isHome
+        ? "absolute bg-transparent"
+        : "fixed bg-[linear-gradient(180deg,#7B2F4E_0%,#6F365F_32%,#5F3F73_68%,#4B3E6D_100%)]"
+    }
+  `}
+>
+
       <div className="max-w-[1440px] mx-auto flex justify-between items-center px-12">
 
         {/* Logo */}
@@ -128,5 +133,6 @@ export default function Header() {
 )}
 
     </header>
+    </>
   );
 }

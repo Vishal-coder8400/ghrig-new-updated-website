@@ -7,9 +7,25 @@ export default function JobCategories() {
     <div className="max-w-6xl mx-auto mt-12 sm:mt-20 mb-10 px-4">
       <div className="w-full">
         <div className="mb-6 sm:mb-12 mt-4">
-          <h2 className="font-[600] text-[26px] sm:text-4xl text-center font_family_jakarta">
-            Top Job Categories Right now (for Job Seekers)
-          </h2>
+         <h2
+  className="
+    font-[600]
+    text-[26px] sm:text-4xl
+    text-center
+    font_family_jakarta
+    leading-tight sm:leading-[1.2]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  Top Job Categories Right now (for Job Seekers)
+</h2>
+
 
           <p className="font_family_display text-center text-[14px] sm:text-lg text-[#7F7F7F] font-normal mb-4 mt-4">
             Click on the link below that interests you as a Job seeker

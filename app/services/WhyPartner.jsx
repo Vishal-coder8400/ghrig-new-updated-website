@@ -45,9 +45,25 @@ const WhyPartner = () => {
 
   return (
     <section className="bg-white py-10">
-      <h2 className="text-center text-4xl md:text-5xl font-bold text-[#333] mb-14">
-        Why partner with <span>gHRig.com</span>
-      </h2>
+     <h2
+  className="
+    text-center
+    text-4xl md:text-5xl
+    font-bold
+    mb-14
+    leading-tight md:leading-[1.2]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  Why partner with <span>gHRig.com</span>
+</h2>
+
 
       <div className="relative max-w-[1300px] mx-auto px-16">
 

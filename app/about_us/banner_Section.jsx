@@ -6,10 +6,25 @@ export default function Banner_Section() {
       {/* ===== Top Section ===== */}
      {/* ===== Top Section ===== */}
 <div className="max-w-7xl w-full text-center px-6 pt-6 pb-10 sm:pt-10 sm:pb-10">
-  <h2 className="text-black sm:leading-[72px] leading-[44px] font-medium sm:text-[64px] text-[36px] font_family_jakarta">
-    We’re Redefining <br className="hidden lg:block" />
-    How India Hires.
-  </h2>
+<h2
+  className="
+    font-medium
+    font_family_jakarta
+    text-[36px] sm:text-[64px]
+    text-center
+    leading-tight sm:leading-[1.1]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  We’re Redefining <br className="hidden lg:block" />
+  How India Hires.
+</h2>
 
   <p className="mt-4 text-black font-normal text-[16px] font_family_inter">
     From freshers to seasoned professionals, from recruiters to{" "}

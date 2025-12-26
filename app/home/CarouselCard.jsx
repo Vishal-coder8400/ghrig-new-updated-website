@@ -72,9 +72,25 @@ export default function CarouselCard() {
 
   return (
     <section className="w-full py-10 flex flex-col items-center">
-      <h2 className="text-[26px] sm:text-[32px] lg:text-[38px] font-bold text-center px-4">
-        Unlock Your Potential with Our Platform
-      </h2>
+     <h2
+  className="
+    text-[26px] sm:text-[32px] lg:text-[38px]
+    font-bold
+    text-center
+    px-4
+    leading-tight sm:leading-[1.2]
+    py-1
+    bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent
+  "
+>
+  Unlock Your Potential with Our Platform
+</h2>
+
 
       <p className="text-gray-600 text-center max-w-2xl mt-3 text-[14px] sm:text-[16px] lg:text-[18px] px-4">
         We offer tailored solutions for every role in the recruitment ecosystem.
