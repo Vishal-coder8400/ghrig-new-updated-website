@@ -12,25 +12,25 @@ const roles = [
   {
     title: "Job Seeker",
     desc: "Find & apply for jobs",
-    slug: "job-seeker",
+    slug: "job-seekerr",
     img: "/assets/images/jobseeker-card.png",
   },
   {
     title: "Trainer",
     desc: "Teach & earn by training",
-    slug: "trainer",
+    slug: "trainerr",
     img: "/assets/images/trainer-card.png",
   },
   {
     title: "Referrer",
     desc: "Refer candidates & earn",
-    slug: "referrer",
+    slug: "referrerr",
     img: "/assets/images/referrer-card.png",
   },
   {
     title: "Corporate HR",
     desc: "End-to-end hiring solutions",
-    slug: "corporate",
+    slug: "corporatee",
     img: "/assets/images/corporate-card.png",
   },
 ];
@@ -75,15 +75,12 @@ export default function RegisterPage() {
 
 function RoleCard({ role }) {
   return (
-    <Link
-      href={`/register/${role.slug}`}
+    <div
       className="relative w-full max-w-[320px] h-[200px] rounded-2xl
                  bg-[linear-gradient(135deg,#8A2E55,#4B3E6D)]
                  text-white overflow-hidden shadow-lg
-                 hover:-translate-y-1 transition"
+                 hover:-translate-y-1 transition cursor-pointer"
     >
-      {/* Logo */}
-
       {/* TEXT */}
       <div className="p-6 pt-16 relative z-10 text-left">
         <h3 className="text-lg font-semibold">
@@ -94,15 +91,16 @@ function RoleCard({ role }) {
         </p>
       </div>
 
-      {/* IMAGE (no alt text to avoid duplication) */}
+      {/* IMAGE */}
       <div className="absolute bottom-0 right-0 w-[175px] h-[175px]">
         <Image
           src={role.img}
           alt=""
           fill
-        className="object-contain object-bottom"
+          className="object-contain object-bottom"
         />
       </div>
-    </Link>
+    </div>
   );
 }
+
