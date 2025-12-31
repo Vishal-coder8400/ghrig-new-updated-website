@@ -12,25 +12,25 @@ const roles = [
   {
     title: "Job Seeker",
     desc: "Find & apply for jobs",
-    slug: "job-seekerr",
+    slug: "job-seeker",
     img: "/assets/images/jobseeker-card.png",
   },
   {
     title: "Trainer",
     desc: "Teach & earn by training",
-    slug: "trainerr",
+    slug: "trainer",
     img: "/assets/images/trainer-card.png",
   },
   {
     title: "Referrer",
     desc: "Refer candidates & earn",
-    slug: "referrerr",
+    slug: "referrer",
     img: "/assets/images/referrer-card.png",
   },
   {
     title: "Corporate HR",
     desc: "End-to-end hiring solutions",
-    slug: "corporatee",
+    slug: "corporate",
     img: "/assets/images/corporate-card.png",
   },
 ];
@@ -40,7 +40,6 @@ export default function RegisterPage() {
     <div className="bg-[#F5F0FA] min-h-screen">
       <div className="max-w-6xl mx-auto py-20 px-6 text-center">
 
-        {/* Heading */}
         <h1 className="text-4xl font-semibold text-[#3D3D3D]">
           Welcome to gHRig
         </h1>
@@ -48,20 +47,18 @@ export default function RegisterPage() {
           Choose your role to continue
         </p>
 
-        {/* TOP ROW */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
           {roles.slice(0, 3).map((role) => (
             <RoleCard key={role.slug} role={role} />
           ))}
         </div>
 
-        {/* BOTTOM ROW */}
-<div className="hidden lg:grid grid-cols-4 gap-10 mt-10">
-  <div /> {/* left gap */}
-  <RoleCard role={roles[3]} />
-  <RoleCard role={roles[4]} />
-  <div /> {/* right gap */}
-</div>
+        <div className="hidden lg:grid grid-cols-4 gap-10 mt-10">
+          <div />
+          <RoleCard role={roles[3]} />
+          <RoleCard role={roles[4]} />
+          <div />
+        </div>
 
         <p className="text-gray-500 mt-16">
           Select your role to login or register and start your journey with gHRig
@@ -75,32 +72,35 @@ export default function RegisterPage() {
 
 function RoleCard({ role }) {
   return (
-    <div
+    <Link
+      href={
+        role.slug === "recruiter"
+          ? "https://job-portal-2026-69gm.vercel.app/recruiter/log-in"
+          : role.slug === "job-seeker"
+          ? "https://job-portal-2026-69gm.vercel.app/job-seeker/log-in"
+          : role.slug === "trainer"
+          ? "https://job-portal-2026-69gm.vercel.app/trainer/log-in"
+          : role.slug === "referrer"
+          ? "https://job-portal-2026-69gm.vercel.app/referrer/log-in"
+          : role.slug === "corporate"
+          ? "https://job-portal-2026-69gm.vercel.app/corporate/log-in"
+          : "#"
+      }
       className="relative w-full max-w-[320px] h-[200px] rounded-2xl
                  bg-[linear-gradient(135deg,#8A2E55,#4B3E6D)]
                  text-white overflow-hidden shadow-lg
-                 hover:-translate-y-1 transition cursor-pointer"
+                 hover:-translate-y-1 transition"
     >
-      {/* TEXT */}
       <div className="p-6 pt-16 relative z-10 text-left">
-        <h3 className="text-lg font-semibold">
-          {role.title}
-        </h3>
+        <h3 className="text-lg font-semibold">{role.title}</h3>
         <p className="text-sm mt-2 opacity-90 max-w-[70%]">
           {role.desc}
         </p>
       </div>
 
-      {/* IMAGE */}
       <div className="absolute bottom-0 right-0 w-[175px] h-[175px]">
-        <Image
-          src={role.img}
-          alt=""
-          fill
-          className="object-contain object-bottom"
-        />
+        <Image src={role.img} alt="" fill className="object-contain object-bottom" />
       </div>
-    </div>
+    </Link>
   );
 }
-

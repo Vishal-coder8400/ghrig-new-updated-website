@@ -65,7 +65,7 @@ export default function Header() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex gap-3">
-          <Link href="/login">
+        <Link href="https://job-portal-2026-69gm.vercel.app/super-admin/log-in">
             <div
               className="
                 relative flex items-center justify-center
@@ -78,7 +78,7 @@ export default function Header() {
               <span className="absolute inset-0 bg-gradient-to-r from-[#BC263A] to-[#004A8F]" />
               <span className="absolute inset-0 bg-[linear-gradient(90deg,rgba(122,46,108,0.7),rgba(75,47,107,0.7))]" />
               <span className="absolute inset-0 rounded-full border border-white/25" />
-              <span className="relative z-10">Login</span>
+              <span className="relative z-10">Get Started</span>
             </div>
           </Link>
 
