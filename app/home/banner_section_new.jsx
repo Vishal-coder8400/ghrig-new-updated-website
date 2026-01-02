@@ -5,7 +5,9 @@ export default function BannerSection() {
   return (
     <>
       {/* ================= DESKTOP SECTION ================= */}
-   <div className="hero-wrapper relative pt-[88px] hidden md:block">
+      <section className="w-full overflow-hidden">
+   <div className="hero-wrapper relative min-h-screen pt-[88px] hidden md:block">
+
 
         
         {/* HEADING */}
@@ -61,6 +63,7 @@ export default function BannerSection() {
           />
         </Link>
       </div>
+      </section>
 
       {/* ================= MOBILE SECTION ================= */}
       <div className="hero-wrapper-mobile relative block md:hidden">

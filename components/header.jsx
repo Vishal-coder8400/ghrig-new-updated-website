@@ -21,13 +21,23 @@ export default function Header() {
     w-full top-0 left-0 z-50 text-white py-4
     ${
       isHome
-        ? "absolute bg-transparent"
+        ? "absolute inset-x-0 top-0 bg-transparent"
         : "fixed bg-[linear-gradient(180deg,#7B2F4E_0%,#6F365F_32%,#5F3F73_68%,#4B3E6D_100%)]"
     }
   `}
 >
 
-      <div className="max-w-[1440px] mx-auto flex justify-between items-center px-12">
+      <div
+  className="
+    w-full
+    max-w-[1440px]
+    mx-auto
+    flex justify-between items-center
+    px-6
+    xl:px-12
+  "
+>
+
 
         {/* Logo */}
         <Link href="/" className="flex items-center">

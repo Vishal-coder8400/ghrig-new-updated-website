@@ -85,18 +85,14 @@
 .hero-wrapper {
   width: 100%;
   position: relative;
-  border-radius: 24px;
   overflow: hidden;
-
   background-image: url("/assets/images/banner-new-updated1.png");
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
-  /* FIX CROPPING */
-
+  background-position: center top;
+  background-size: cover;
   height: 950px;
-  /* FIX HEIGHT */
 }
+
 
 
 @media screen and (max-width: 768px) {
