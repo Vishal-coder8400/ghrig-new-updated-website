@@ -81,7 +81,7 @@ function RoleCard({ role }) {
           : role.slug === "trainer"
           ? "https://job-portal-2026-69gm.vercel.app/trainer/log-in"
           : role.slug === "referrer"
-          ? "https://job-portal-2026-69gm.vercel.app/referrer/log-in"
+          ? "https://job-portal-2026-69gm.vercel.app/super-admin/log-in"
           : role.slug === "corporate"
           ? "https://job-portal-2026-69gm.vercel.app/corporate/log-in"
           : "#"
