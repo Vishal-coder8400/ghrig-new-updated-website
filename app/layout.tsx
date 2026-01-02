@@ -6,6 +6,9 @@ import Footer from "@/components/footer";
 export const metadata: Metadata = {
   title: "gHRig",
   description: "gHRig.com is formed by a group of like minded HR professionals with experience in Corporate world in Telecom, Banking, Financial Services and Insurance sectors.",
+   icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
