@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import contact_img from "../../public/assets/images/contact_img.png";
 import email from "../../public/assets/images/email.png";
@@ -6,6 +7,50 @@ import email from "../../public/assets/images/email.png";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 export default function SectionForm() {
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(null);
+  const [error, setError] = useState(null);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(null);
+    setError(null);
+
+    try {
+      const fd = new FormData();
+      fd.append("firstName", form.firstName);
+      fd.append("lastName", form.lastName);
+      fd.append("email", form.email);
+      fd.append("message", form.message);
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: fd,
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to send");
+
+      setSuccess("Message sent successfully!");
+      setForm({ firstName: "", lastName: "", email: "", message: "" });
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="w-full bg-[#F5F2FF] flex justify-center">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 py-6 md:py-10 px-4">
@@ -32,7 +77,13 @@ export default function SectionForm() {
 </h2>
 
 
-          <p className="mt-8 text-black font-normal text-[16px] text-start">
+          <p className="mt-8 text-black font-normal text-[16px] text-start font-semibold 
+        bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent">
             {" "}
             We’d love to hear from you! Whether you have questions, need assistance, or just want to say hello, feelfree to reach out. Our team is always ready to help.{" "}
           </p>
@@ -40,137 +91,104 @@ export default function SectionForm() {
           <hr className="my-8" />
 
           {/* FORM */}
-          <form className="space-y-6">
-            {/* First & Last Name */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="flex flex-col space-y-2">
-                <label
-                  className="text-[14px] font-medium leading-[24px] text-[#20102B] font_family_inter
-"
-                >
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. Jason Wild"
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
+         <form className="space-y-6" onSubmit={handleSubmit}>
+  {/* First & Last Name */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div className="flex flex-col space-y-2">
+      <label className="text-[14px] font-semibold leading-[24px] text-[#20102B] font_family_inter">
+        First Name
+      </label>
+      <input
+        type="text"
+        name="firstName"
+        value={form.firstName}
+        onChange={handleChange}
+        placeholder="e.g. Jason"
+        className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+        required
+      />
+    </div>
 
-              <div className="flex flex-col space-y-2">
-                <label className="text-[14px] font-medium leading-[24px] text-[#20102B] font_family_inter">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. Jason Wild"
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-            </div>
+    <div className="flex flex-col space-y-2">
+      <label className="text-[14px] font-semibold leading-[24px] text-[#20102B] font_family_inter">
+        Last Name
+      </label>
+      <input
+        type="text"
+        name="lastName"
+        value={form.lastName}
+        onChange={handleChange}
+        placeholder="e.g. Wild"
+        className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+        required
+      />
+    </div>
+  </div>
 
-            {/* Email */}
-            <div className="flex flex-col space-y-2">
-              <label
-                className="text-[14px] font-medium leading-[24px] text-[#20102B] font_family_inter
-"
-              >
-                E-mail Address
-              </label>
-              <input
-                type="email"
-                placeholder="E-mail ID"
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
-            </div>
-
-            {/* Message */}
-            <div className="flex flex-col space-y-2">
-              <label
-                className="text-[14px] font-medium leading-[24px] text-[#20102B] font_family_inter
-"
-              >
-                Message
-              </label>
-              <textarea
-                rows="5"
-                placeholder="Write your message to us here"
-                className="px-4 py-2 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
-            </div>
-
-          {/* Buttons */}
-<div className="flex justify-center mt-6 sm:mt-8 gap-2 flex-wrap">
-  
-  <button
-    className="
-      relative
-      text-[13px] sm:text-[15px]
-      text-white
-      px-4 sm:px-5
-      py-2.5 sm:py-3
-      rounded-[100px]
-      font-semibold
-      font_family_display
-      overflow-hidden
-      shadow-[0_10px_25px_rgba(0,0,0,0.12)]
-    "
-  >
-    {/* BASE GRADIENT */}
-    <span
-      className="
-        absolute inset-0
-        rounded-[100px]
-        bg-gradient-to-r
-        from-[#BC263A]
-        to-[#004A8F]
-      "
+  {/* Email */}
+  <div className="flex flex-col space-y-2">
+    <label className="text-[14px] font-semibold leading-[24px] text-[#20102B] font_family_inter">
+      E-mail Address
+    </label>
+    <input
+      type="email"
+      name="email"
+      value={form.email}
+      onChange={handleChange}
+      placeholder="E-mail ID"
+      className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+      required
     />
+  </div>
 
-    {/* PURPLE SOFT OVERLAY */}
-    <span
-      className="
-        absolute inset-0
-        rounded-[100px]
-        bg-[linear-gradient(90deg,rgba(122,46,108,0.65),rgba(75,47,107,0.65))]
-      "
+  {/* Message */}
+  <div className="flex flex-col space-y-2">
+    <label className="text-[14px] font-semibold leading-[24px] text-[#20102B] font_family_inter">
+      Message
+    </label>
+    <textarea
+      rows="5"
+      name="message"
+      value={form.message}
+      onChange={handleChange}
+      placeholder="Write your message to us here"
+      className="px-4 py-2 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-purple-500"
     />
+  </div>
 
-    {/* INNER BORDER */}
-    <span
+  {/* Submit */}
+  <div className="flex justify-center mt-6 sm:mt-8 gap-2 flex-wrap">
+    <button
+      type="submit"
+      disabled={loading}
       className="
-        absolute inset-0
+        relative
+        text-[13px] sm:text-[15px]
+        text-white
+        px-4 sm:px-5
+        py-2.5 sm:py-3
         rounded-[100px]
-        border border-[rgba(142,119,228,0.6)]
+        font-semibold
+        font_family_display
+        overflow-hidden
+        shadow-[0_10px_25px_rgba(0,0,0,0.12)]
+        disabled:opacity-60
       "
-    />
+    >
+      <span className="absolute inset-0 rounded-[100px] bg-gradient-to-r from-[#BC263A] to-[#004A8F]" />
+      <span className="absolute inset-0 rounded-[100px] bg-[linear-gradient(90deg,rgba(122,46,108,0.65),rgba(75,47,107,0.65))]" />
+      <span className="absolute inset-0 rounded-[100px] border border-[rgba(142,119,228,0.6)]" />
 
-    {/* CONTENT */}
-    <span className="relative z-10">
-      Join the Movement
-    </span>
-  </button>
+      <span className="relative z-10">
+        {loading ? "Sending..." : "Join the Movement"}
+      </span>
+    </button>
+  </div>
 
-  <button
-    className="
-      text-[13px] sm:text-[15px]
-      px-4 sm:px-5
-      py-2.5 sm:py-3
-      rounded-[100px]
-      font-semibold
-      font_family_display
-      text-black
-      bg-white
-      border
-      hover:bg-[#8E77E4]/5
-      transition
-    "
-  >
-    Explore Roles
-  </button>
+  {success && <p className="text-green-600 text-center">{success}</p>}
+  {error && <p className="text-red-600 text-center">{error}</p>}
+</form>
 
-</div>
-          </form>
         </div>
 
         {/* RIGHT SECTION */}

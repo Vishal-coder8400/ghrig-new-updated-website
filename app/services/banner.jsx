@@ -85,7 +85,13 @@ const ServiceBanner = () => {
   {carouselData[activeIndex].title}
 </h1>
 
-        <p className="text-base text-center sm:text-lg text-gray-600 mb-8 font_family_inter transition-all duration-500">
+        <p className="text-base text-center sm:text-lg  font-semibold 
+        bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent mb-8 font_family_inter transition-all duration-500">
           {carouselData[activeIndex].subtitle}
         </p>
 

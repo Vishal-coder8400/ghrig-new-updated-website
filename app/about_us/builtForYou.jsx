@@ -61,7 +61,14 @@ const BuiltForYou = () => {
 </h2>
 
 
-        <div className="md:w-[50%] text-gray-600 text-lg mt-6 md:mt-0 mx-auto md:mx-0 md:text-right">
+
+        <div className="md:w-[50%] text-gray-600 text-lg mt-6 md:mt-0 mx-auto md:mx-0 md:text-right  font-semibold 
+        bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent">
           <p>
             Parallelly we assist our Clients by matching the right individuals
             with right skill sets for their open positions. We act as a catalyst
@@ -113,7 +120,7 @@ const BuiltForYou = () => {
               </ul>
 
               {/* Button – PERFECTLY ALIGNED */}
-              <button
+              {/* <button
                 type="button"
                 className="
                   mt-auto
@@ -130,7 +137,7 @@ const BuiltForYou = () => {
               >
                 Proceed
                 <ChevronRightIcon className="w-4 h-4" />
-              </button>
+              </button> */}
             </CardContent>
           </Card>
         ))}

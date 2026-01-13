@@ -12,13 +12,13 @@ export default function PrivacyPolicyPage() {
         Privacy Policy
       </h1>
 
-      <p className="mb-6 text-lg">
+      <p className="mb-6 text-lg font-semibold">
         At <strong className=" bg-gradient-to-r
     from-[#8E2C6D]
     via-[#7A3FA2]
     to-[#4B4DB5]
     bg-clip-text
-    text-transparent">GHRIG Digital Services</strong>, we are committed to protecting your privacy.
+    text-transparent">gHRig People Solutions</strong>, we are committed to protecting your privacy.
         This document explains how we collect, use, and safeguard your personal data when you interact with our services.
       </p>
 
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
     to-[#4B4DB5]
     bg-clip-text
     text-transparent">1. Information We Collect</h2>
-        <p>
+        <p className="font-semibold">
           We may collect personal details such as name, email, phone number, device type, browser details,
           IP address, and usage analytics to enhance user experience and platform security.
         </p>
@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
     to-[#4B4DB5]
     bg-clip-text
     text-transparent">2. How We Use Your Data</h2>
-        <p>
+        <p className="font-semibold">
           The collected data helps us personalize services, maintain platform security, improve functionality,
           analyze trends, and send relevant updates only when permitted by the user.
         </p>
@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
     to-[#4B4DB5]
     bg-clip-text
     text-transparent">3. Data Protection & Storage</h2>
-        <p>
+        <p className="font-semibold">
           We implement secure encryption, restricted access, and regular system audits to prevent unauthorized
           access, manipulation, or disclosure of personal information.
         </p>
@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
     to-[#4B4DB5]
     bg-clip-text
     text-transparent">4. Cookies & Tracking</h2>
-        <p>
+        <p className="font-semibold">
           Our platform may use cookies to enhance browsing experience, remember user preferences, and analyze site performance.
           Users can modify browser settings to decline cookies if preferred.
         </p>
@@ -86,7 +86,7 @@ export default function PrivacyPolicyPage() {
     to-[#4B4DB5]
     bg-clip-text
     text-transparent">5. Third-Party Sharing</h2>
-        <p>
+        <p className="font-semibold">
           We do not sell personal data. However, limited information may be shared with trusted partners solely
           to improve service quality (e.g., analytics, support tools, hosting services).
         </p>
@@ -100,7 +100,7 @@ export default function PrivacyPolicyPage() {
     to-[#4B4DB5]
     bg-clip-text
     text-transparent">6. User Rights & Control</h2>
-        <p>
+        <p className="font-semibold">
           Users have the right to request data access, update information, or ask for deletion unless required by law to retain it.
         </p>
       </div>
@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
     to-[#4B4DB5]
     bg-clip-text
     text-transparent">7. External Links</h2>
-        <p>
+        <p className="font-semibold">
           Our website may include links to third-party platforms. We are not responsible for the privacy practices
           or content of these external websites.
         </p>
@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
     to-[#4B4DB5]
     bg-clip-text
     text-transparent">8. Policy Updates</h2>
-        <p>
+        <p className="font-semibold">
           This privacy policy may be updated to reflect legal, operational, or service improvements. Continued usage of our platform
           indicates acceptance of modified terms.
         </p>
@@ -141,7 +141,7 @@ export default function PrivacyPolicyPage() {
     to-[#4B4DB5]
     bg-clip-text
     text-transparent">Need Help?</h2>
-        <p>
+        <p className="font-semibold">
           If you have any questions regarding this policy, feel free to reach out:
         </p>
         <p className="mt-2 font-medium">
@@ -149,8 +149,9 @@ export default function PrivacyPolicyPage() {
     from-[#8E2C6D]
     via-[#7A3FA2]
     to-[#4B4DB5]
+    font-semibold
     bg-clip-text
-    text-transparent">support@ghrig.com</a>
+    text-transparent">connect@ghrig.com</a>
         </p>
       </div>
 

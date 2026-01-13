@@ -88,7 +88,7 @@ export default function VisionMission() {
 </h2>
 
 
-          <p className="text-[16px] text-gray-700 leading-[24px]">
+          <p className="text-[16px] text-gray-700 leading-[24px] font-semibold">
             About Us Incepted in 2025 and based out from Noida, gHRig.com is
             formed by a group of like minded HR professionals with experience in
             Corporate world in Telecom, Banking, Financial Services and
@@ -151,28 +151,33 @@ export default function VisionMission() {
                 />
 
                 <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    {item.icon}
-                  <h3
-  className="
-    text-[22px]
-    font-bold
-    leading-tight
-    py-0.5
-    bg-gradient-to-r
-    from-[#8E2C6D]
-    via-[#7A3FA2]
-    to-[#4B4DB5]
-    bg-clip-text
-    text-transparent
-  "
->
-  {item.title}
-</h3>
+                <div className="flex flex-col items-center justify-center mb-3 text-center">
+  {/* Icon */}
+  <div className="mb-1 flex justify-center">
+    {item.icon}
+  </div>
 
-                  </div>
+  {/* Title */}
+  <h3
+    className="
+      text-[22px]
+      font-bold
+      leading-[1.2]
+      bg-gradient-to-r
+      from-[#8E2C6D]
+      via-[#7A3FA2]
+      to-[#4B4DB5]
+      bg-clip-text
+      text-transparent
+      text-center
+    "
+  >
+    {item.title}
+  </h3>
+</div>
 
-                  <p className="text-[16px] text-gray-700 leading-[24px]">
+
+                  <p className="text-[16px] text-gray-700 leading-[24px] font-semibold">
                     {item.text}
                   </p>
                 </div>

@@ -27,7 +27,14 @@ export default function JobCategories() {
 </h2>
 
 
-          <p className="font_family_display text-center text-[14px] sm:text-lg text-[#7F7F7F] font-normal mb-4 mt-4">
+          <p className="font_family_display text-center text-[14px] sm:text-lg
+          font-semibold 
+          bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent font-normal mb-4 mt-4">
             Click on the link below that interests you as a Job seeker
             <br className="hidden lg:block" />
           </p>
@@ -87,37 +94,7 @@ export default function JobCategories() {
               </div>
             </div>
 
-            <div className="flex mt-6 mb-2 justify-center">
-              <button
-                type="button"
-                className="
-                  group
-                  relative
-                  flex items-center justify-center gap-2
-                  h-[38px] sm:h-[42px]
-                  px-[24px] sm:px-[28px]
-                  rounded-full
-                  bg-white
-                  shadow-[0_4px_14px_rgba(0,0,0,0.25)]
-                  transition-transform duration-200 hover:scale-105 active:scale-95
-                  focus:outline-none
-                "
-              >
-                {/* Text with Gradient Fill */}
-                <span className="
-                  font_family_inter
-                  font-bold
-                  text-[13px] sm:text-sm
-                  bg-gradient-to-r from-[#8E2C6D] to-[#4B4DB5]
-                  bg-clip-text text-transparent
-                  flex items-center gap-2
-                ">
-                  Apply Now
-                  {/* Icon colored with standard text color or hardcoded to match gradient start */}
-                  <ChevronRightIcon className="w-4 h-4 text-[#8E2C6D]" />
-                </span>
-              </button>
-            </div>
+           
           </div>
 
           {/* Card 2 */}
@@ -172,7 +149,7 @@ export default function JobCategories() {
             </div>
 
             <div className="flex mt-6 mb-2 justify-center">
-              <button
+              {/* <button
                 type="button"
                 className="
                   group
@@ -198,7 +175,7 @@ export default function JobCategories() {
                   Apply Now
                   <ChevronRightIcon className="w-4 h-4 text-[#8E2C6D]" />
                 </span>
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -255,33 +232,7 @@ export default function JobCategories() {
             </div>
 
             <div className="flex mt-6 mb-2 justify-center">
-              <button
-                type="button"
-                className="
-                  group
-                  relative
-                  flex items-center justify-center gap-2
-                  h-[38px] sm:h-[42px]
-                  px-[24px] sm:px-[28px]
-                  rounded-full
-                  bg-white
-                  shadow-[0_4px_14px_rgba(0,0,0,0.25)]
-                  transition-transform duration-200 hover:scale-105 active:scale-95
-                  focus:outline-none
-                "
-              >
-                <span className="
-                  font_family_inter
-                  font-bold
-                  text-[13px] sm:text-sm
-                  bg-gradient-to-r from-[#8E2C6D] to-[#4B4DB5]
-                  bg-clip-text text-transparent
-                  flex items-center gap-2
-                ">
-                  Apply Now
-                  <ChevronRightIcon className="w-4 h-4 text-[#8E2C6D]" />
-                </span>
-              </button>
+            
             </div>
           </div>
 

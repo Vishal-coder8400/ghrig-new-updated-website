@@ -7,7 +7,7 @@ const jobCategories = [
   ["E Commerce", "Travel"],
   ["Hospitality", "Financial Services"],
   ["Banking", "IT"],
-  ["Insaurance", "Housing"],
+  ["Insurance", "Housing"],
   ["FMCG"],
 ];
 

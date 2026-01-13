@@ -14,7 +14,7 @@ const roles = [
     href: "https://ghrig-new-update.vercel.app/log-in",
   },
   {
-    title: "HR Recruiter",
+    title: " gHRig Recruiter",
     image: "/assets/images/jobRecruiter.png",
     href: "https://ghrig-new-update.vercel.app/recruiter/log-in",
   },
@@ -41,6 +41,7 @@ export const Engage = () => {
     text-center
     leading-tight md:leading-[1.2]
     py-1
+    
     bg-gradient-to-r
     from-[#8E2C6D]
     via-[#7A3FA2]
@@ -49,10 +50,17 @@ export const Engage = () => {
     text-transparent
   "
 >
-  Choose How You Engage with GHRig
+  Choose How You Engage with  gHRig
 </h2>
 
-        <p className="text-[15px] sm:text-lg text-gray-600 max-w-2xl">
+        <p className="text-[15px] sm:text-lg text-gray-600 max-w-2xl
+        font-semibold 
+        bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent">
           Click on your role below to proceed to the respective login page and have a great journey with gHRig
         </p>
       </header>
@@ -94,26 +102,7 @@ export const Engage = () => {
                 {role.title}
               </h3>
 
-              <a
-                href={role.href}
-                target="_blank"
-                className="
-                  flex items-center justify-center gap-2
-                  h-[32px] sm:h-[35px]
-                  px-[18px] sm:px-[21px]
-                  rounded-[100px]
-                  bg-white
-                  text-[#7A3FA2]
-                  text-[13px] sm:text-sm
-                  font-semibold
-                  transition-all
-                  duration-300
-                  hover:text-[#6F2E91]
-                "
-              >
-                Proceed
-                <ChevronRightIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              </a>
+            
             </CardContent>
           </Card>
         ))}

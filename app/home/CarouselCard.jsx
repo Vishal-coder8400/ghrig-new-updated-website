@@ -92,7 +92,14 @@ export default function CarouselCard() {
 </h2>
 
 
-      <p className="text-gray-600 text-center max-w-2xl mt-3 text-[14px] sm:text-[16px] lg:text-[18px] px-4">
+      <p className="
+      font-semibold 
+      bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent text-center max-w-2xl mt-3 text-[14px] sm:text-[16px] lg:text-[18px] px-4">
         We offer tailored solutions for every role in the recruitment ecosystem.
         Find out how we can help you succeed.
       </p>

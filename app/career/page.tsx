@@ -106,7 +106,7 @@ export default function CareerPage() {
 
 
 
-          <p className="text-gray-600 mt-3 text-md max-w-2xl mx-auto">
+          <p className="text-gray-600 mt-3 text-md max-w-2xl mx-auto font-semibold">
             If our platform excites You, pls apply via below fields. <br /> Our representative shall connect with You, if found suitable
           </p>
         </div>
@@ -183,7 +183,7 @@ export default function CareerPage() {
         </div>
       </div>
 
-      <div className="w-[220px] sm:w-[280px] lg:w-[330px] xl:w-[380px] mx-auto self-start">
+      <div className="hidden sm:block w-[220px] sm:w-[280px] lg:w-[330px] xl:w-[380px] mx-auto self-start">
  <div className="relative w-[220px] sm:w-[280px] lg:w-[330px] xl:w-[380px] mx-auto">
   <div className="relative aspect-[9/4] flex items-start">
     <Image
@@ -292,17 +292,50 @@ export default function CareerPage() {
     </div>
 
     {/* ✅ File Upload */}
-    <div>
-     <label className="block text-sm font-medium text-white">Upload CV / Resume</label>
-      <input
-        type="file"
-        accept=".pdf,.doc,.docx"
-        onChange={(e) => setCv(e.target.files?.[0] ?? null)}
-      />
-      {cv && (
-        <div className="text-sm mt-1 text-gray-600">{cv.name}</div>
-      )}
-    </div>
+    {/* Upload CV */}
+<div>
+  <label className="block text-sm font-medium text-white mb-2">
+    Upload CV / Resume
+  </label>
+
+  <div className="flex items-center gap-4">
+    {/* Hidden input */}
+    <input
+      type="file"
+      accept=".pdf,.doc,.docx"
+      id="cvUpload"
+      className="hidden"
+      onChange={(e) => setCv(e.target.files?.[0] ?? null)}
+    />
+
+    {/* Custom button */}
+    <label
+      htmlFor="cvUpload"
+      className="
+        cursor-pointer
+        bg-white
+        text-[#7A3FA2]
+        font-semibold
+        px-6 py-2.5
+        rounded-full
+        shadow
+        hover:bg-white/90
+        transition
+        inline-flex
+        items-center
+        gap-2
+      "
+    >
+       Choose File
+    </label>
+
+    {/* File name */}
+    <span className="text-sm text-white/80 truncate max-w-[200px]">
+      {cv ? cv.name : "No file chosen"}
+    </span>
+  </div>
+</div>
+
 
     {/* ✅ Submit button */}
    <button

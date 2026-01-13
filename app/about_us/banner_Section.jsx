@@ -26,7 +26,13 @@ export default function Banner_Section() {
   How India Hires.
 </h2>
 
-  <p className="mt-4 text-black font-normal text-[16px] font_family_inter">
+  <p className="mt-4 text-black font-normal text-[16px] font_family_inter  font-semibold 
+        bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent">
     From freshers to seasoned professionals, from recruiters to{" "}
     <br className="hidden lg:block" />
     referrers — gHRig is the new operating system for talent.

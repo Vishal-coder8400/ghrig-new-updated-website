@@ -42,7 +42,7 @@ export default function OurStory() {
               Built For the Real World
             </h2>
 
-            <div className="space-y-4 text-[#141414B2] text-[16px] font_family_display leading-relaxed">
+   <div className="space-y-4 text-[#141414] text-[16px] font_family_display leading-relaxed font-medium">
 
               <p>
                 With 2 decades of Corporate HR experience and after going through all the phases in HR Function, right as a Management Trainee to Heading the HR function and facing the ever demanding Board members, from handling up a small team unit of 300 to scaling up to 2000 plus mostly in Tier 2 / 3 cities, to heading a team size of more than 15,000 plus, managing scale, volume and multiple product lines in the BFSI sector, there always was a burning desire by our Founder to build something which takes care of the day to day pain of the HR Fraternity members as well as meeting the demands from Management.

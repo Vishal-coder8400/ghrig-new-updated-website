@@ -165,7 +165,7 @@ export const FaqSection = () => {
 </h2>
 
 
-          <p className="mt-4 text-[14px] sm:text-[15px] lg:text-[16px] leading-[22px] sm:leading-[24px] text-[#141414b2]">
+          <p className="mt-4 text-[14px] sm:text-[15px] lg:text-[16px] leading-[22px] sm:leading-[24px] text-[#141414b2] font-semibold">
            If any of your query remains un answered, pls feel to write to <span className=" bg-gradient-to-r
     from-[#8E2C6D]
     via-[#7A3FA2]

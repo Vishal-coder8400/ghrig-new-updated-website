@@ -19,7 +19,12 @@ export default function CarouselSection() {
     <section className="w-full py-8 sm:py-12 md:py-16 bg-white overflow-hidden">
       {/* TEXT */}
       <div className="text-center max-w-3xl mx-auto mb-5 sm:mb-8 px-4">
-        <p className="text-[15px] sm:text-[17px] text-gray-500 leading-relaxed">
+        <p className="text-[15px] sm:text-[17px]  leading-relaxed font-semibold  bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent">
           Top companies trust our platform to find the right talent.
           <br className="hidden sm:block" />
           Join the network of industry leaders hiring through us.

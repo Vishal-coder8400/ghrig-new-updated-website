@@ -2,60 +2,49 @@ import React from "react";
 
 const testimonials = [
   {
-    name: "Dave Nash",
-    handle: "@once",
+    name: "VP HR from Fintech Firm",
     text:
-      "After exploring the @Kundkund platform for a few months, I finally took the plunge. Wow, it’s a game changer! Just give it a shot! You won't regret it ✌️",
+      "Collaborating with someone who has firsthand experience on this side of the table is truly remarkable. Sanjay possesses a profound understanding of the challenges faced in Talent Acquisition (TA). His insight into candidate profiles is exceptional, and his extensive network allows him to attract top-tier talent effectively. I encourage everyone to explore the recruitment services offered by his company.",
   },
   {
-    name: "Kyle Sulkar",
-    handle: "@sulkarmedia",
+    name: "COO of a Housing Finance Company",
     text:
-      "Integrates seamlessly with various financial tools and provides IPO insights in just minutes. How can something so effective be so user-friendly? This is top-notch design and functionality! 😍",
+      "Quick TAT, understanding of the job requirement and good database has helped us towards closure of few critical positions and at Tier 2 / 3 locations.",
   },
   {
     name: "Jordan Welch",
-    handle: "@jrdn.w",
     text:
       "I was part of the beta launch… absolutely mind-blowing. Managing my investments has never been easier. @Kundkund is my go-to platform! 😄",
   },
   {
     name: "Dylan Pearson",
-    handle: "@dylanbusiness",
     text:
       "Kundkund – The Tesla of financial services. A brief consultation nearly doubled my investment returns. The future is bright! 🌟",
   },
- 
 ];
 
 export default function TestimonialsSection() {
   return (
     <section className="w-full py-8 sm:py-10 bg-white">
       {/* Header */}
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 px-4 sm:px-6">
-        <div>
-    <h2
-  className="
-    text-[26px] sm:text-4xl
-    font-bold
-    leading-tight sm:leading-[1.2]
-    py-1
-    text-center
-    bg-gradient-to-r
-    from-[#8E2C6D]
-    via-[#7A3FA2]
-    to-[#4B4DB5]
-    bg-clip-text
-    text-transparent
-  "
->
-  Hear from Our Customers
-</h2>
-
-          {/* <p className="text-[14px] sm:text-base text-gray-500 mt-2 max-w-xl">
-            Over 2,000 people have already benefited from our all-in-one finance platform.
-          </p> */}
-        </div>
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-10 px-4 sm:px-6">
+        <h2
+          className="
+            text-[26px] sm:text-4xl
+            font-bold
+            leading-tight sm:leading-[1.2]
+            py-1
+            text-center
+            bg-gradient-to-r
+            from-[#8E2C6D]
+            via-[#7A3FA2]
+            to-[#4B4DB5]
+            bg-clip-text
+            text-transparent
+          "
+        >
+          Hear from Our Customers
+        </h2>
       </div>
 
       {/* Cards */}
@@ -65,8 +54,8 @@ export default function TestimonialsSection() {
             key={index}
             className="
               relative
-              min-h-[220px] sm:min-h-[260px]
-              p-4 sm:p-6
+              min-h-[180px] sm:min-h-[210px]
+              p-3 sm:p-4
               rounded-2xl
               bg-[#FBF9FF]
               text-[#2A2A2A]
@@ -86,12 +75,12 @@ export default function TestimonialsSection() {
             "
           >
             {/* Header */}
-            <div className="flex items-center gap-3 mb-3 sm:mb-4">
-              {/* ✅ FIGMA AVATAR ICON */}
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EFEAF6] flex items-center justify-center">
+            <div className="flex items-center gap-2 mb-2 sm:mb-3">
+              {/* Avatar */}
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#EFEAF6] flex items-center justify-center">
                 <svg
-                  width="18"
-                  height="18"
+                  width="16"
+                  height="16"
                   viewBox="0 0 24 24"
                   fill="none"
                   className="text-[#6F2F4E]"
@@ -109,18 +98,13 @@ export default function TestimonialsSection() {
                 </svg>
               </div>
 
-              <div>
-                <p className="font-semibold text-[14px] sm:text-base">
-                  {item.name}
-                </p>
-                <p className="text-[12px] sm:text-sm opacity-80">
-                  {item.handle}
-                </p>
-              </div>
+              <p className="font-semibold text-[13px] sm:text-[14px]">
+                {item.name}
+              </p>
             </div>
 
             {/* Text */}
-            <p className="text-[13px] sm:text-sm leading-relaxed opacity-90">
+            <p className="text-[12px] sm:text-[13px] leading-snug opacity-90 font-semibold">
               {item.text}
             </p>
           </div>
