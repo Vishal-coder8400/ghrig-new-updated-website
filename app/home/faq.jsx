@@ -166,10 +166,13 @@ export const FaqSection = () => {
 
 
           <p className="mt-4 text-[14px] sm:text-[15px] lg:text-[16px] leading-[22px] sm:leading-[24px] text-[#141414b2]">
-            You can return any item within 30 days of purchase as long as it's
-            in its original condition with tags still attached. Simply contact
-            our customer service team, and they will guide you through the
-            process. Please note that certain items are non-returnable.
+           If any of your query remains un answered, pls feel to write to <span className=" bg-gradient-to-r
+    from-[#8E2C6D]
+    via-[#7A3FA2]
+    to-[#4B4DB5]
+    bg-clip-text
+    text-transparent"> connect@ghrig.com </span>
+Our team shall respond to you at earliest
           </p>
         </div>
 

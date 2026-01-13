@@ -202,7 +202,7 @@ export default function SectionForm() {
         <div>
           <p className="font-[500] text-[16px] text-black">E-mail</p>
           <p className="font-[500] text-[15px] text-[#7C7C7C]">
-            contactus@ghrlig.com
+            connect@ghrig.com
           </p>
         </div>
       </div>
@@ -214,7 +214,7 @@ export default function SectionForm() {
         <div>
           <p className="font-[500] text-[16px] text-black">Address</p>
           <p className="font-[500] text-[15px] text-[#7C7C7C]">
-            1901 Thornridge Cir. Shiloh, Hawaii 81063
+            A 100, A Block, Sector 58, Noida, U.P. 201301
           </p>
         </div>
       </div>
@@ -226,7 +226,7 @@ export default function SectionForm() {
         <div>
           <p className="font-[500] text-[16px] text-black">Phone</p>
           <p className="font-[500] text-[15px] text-[#7C7C7C]">
-            +1 (999) 999-99-99
+            +91 97118 25377
           </p>
         </div>
       </div>

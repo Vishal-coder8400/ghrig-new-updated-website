@@ -75,9 +75,9 @@ export default function TestimonialsSection() {
   Hear from Our Customers
 </h2>
 
-          <p className="text-[14px] sm:text-base text-gray-500 mt-2 max-w-xl">
+          {/* <p className="text-[14px] sm:text-base text-gray-500 mt-2 max-w-xl">
             Over 2,000 people have already benefited from our all-in-one finance platform.
-          </p>
+          </p> */}
         </div>
       </div>
 

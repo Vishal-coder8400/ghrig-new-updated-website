@@ -74,13 +74,17 @@ export default function CareerPage() {
 
         {/* ✅ Heading */}
         <div className="text-center mb-12 px-5">
-        <h1
+<h1
   className="
-    text-xl sm:text-xxl lg:text-3xl
+    text-[18px] sm:text-[20px] lg:text-[24px]
     font-bold
     font_family_jakarta
-    leading-tight sm:leading-[1.2]
-    py-1
+    leading-[1.15]
+    w-full
+    px-0
+    py-0
+    text-center
+    tracking-tight
     bg-gradient-to-r
     from-[#8E2C6D]
     via-[#7A3FA2]
@@ -89,11 +93,21 @@ export default function CareerPage() {
     text-transparent
   "
 >
-  We're always excited to hear from you!
+  <span className="block">
+    We are looking for Dedicated and Dynamic Team Members
+  </span>
+  <span className="block">
+    who can add value to our ecosystem and can work in a fast-paced environment.
+  </span>
 </h1>
 
+
+
+
+
+
           <p className="text-gray-600 mt-3 text-md max-w-2xl mx-auto">
-            We’d love to hear from you! Whether you have questions, need assistance, or just want to say hello, feel free to reach out. Our team is always ready to help.
+            If our platform excites You, pls apply via below fields. <br /> Our representative shall connect with You, if found suitable
           </p>
         </div>
 
