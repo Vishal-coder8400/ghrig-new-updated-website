@@ -25,30 +25,7 @@ const testimonials = [
     text:
       "Kundkund – The Tesla of financial services. A brief consultation nearly doubled my investment returns. The future is bright! 🌟",
   },
-  {
-    name: "Sebas",
-    handle: "@sebaskedoya",
-    text:
-      "Once you start using @Kundkund, there's no going back. Analyzing IPOs has never been easier! 🔥🔥",
-  },
-  {
-    name: "Piero Madu",
-    handle: "@pieromadu",
-    text:
-      "@Kundkund has revolutionized my investment strategy. Essential for maximizing returns ⚡",
-  },
-  {
-    name: "George Klein",
-    handle: "@GeorgeBlue94",
-    text:
-      "Kundkund is the culmination of a year’s work by many experts. The future of finance! 💎",
-  },
-  {
-    name: "Faiz W",
-    handle: "@Faiz",
-    text:
-      "Incredible! My portfolio grew by 15% in no time 😱",
-  },
+ 
 ];
 
 export default function TestimonialsSection() {

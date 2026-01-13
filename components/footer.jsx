@@ -22,8 +22,8 @@ export default function Footer() {
       <div className="relative z-10 flex flex-col items-center gap-8 lg:gap-12 pt-10 lg:pt-14 pb-10">
         {/* TOP CARD */}
         <div
-          className="flex flex-col lg:flex-row items-start gap-6 lg:gap-24 px-6 lg:px-12 py-8 lg:py-10 self-stretch w-full rounded-2xl"
-          style={{ backgroundColor: "#F1E7EA" }}
+          className="flex flex-col lg:flex-row items-start gap-6 lg:gap-24 px-6 lg:px-12 py-8 lg:py-10 self-stretch w-full rounded-2xl "
+          style={{ backgroundColor: "#F8F3F1" }}
         >
           {/* Logo Section (UNCHANGED) */}
           <div className="flex items-center gap-2 invert">

@@ -70,12 +70,7 @@ export default function what_stand() {
 </h2>
 
           </div>
-          <div>
-            <p className="text-[#141414B2] mt-3 md:text-right text-[16px] font-medium font_family_display">
-              Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt.
-              Pariatur sint culpa do incididunt eiusmod eiusmod culpa.
-            </p>
-          </div>
+        
         </div>
       </div>
 
