@@ -12,14 +12,14 @@ const testimonials = [
       "Quick TAT, understanding of the job requirement and good database has helped us towards closure of few critical positions and at Tier 2 / 3 locations.",
   },
   {
-    name: "Jordan Welch",
+    name: "Head HR from reputed Housing Finance Company",
     text:
-      "I was part of the beta launch… absolutely mind-blowing. Managing my investments has never been easier. @Kundkund is my go-to platform! 😄",
+      "It has been a pleasure engaging with gHRig for our talent acquisition requirements. Our hiring experience with gHRig has been highly satisfactory and well-structured.",
   },
   {
-    name: "Dylan Pearson",
+    name: "Zonal HR from Insurance Broking firm",
     text:
-      "Kundkund – The Tesla of financial services. A brief consultation nearly doubled my investment returns. The future is bright! 🌟",
+      "We appreciate the services provided by gHRIg People Solutions. Their team demonstrates excellent coordination, shares quality candidate lineups, and responds promptly to our manpower requirements.Their quick turnaround and proactive follow-ups in sourcing quality manpower have consistently supported our hiring needs. We value our association with gHRIg and consider them a reliable manpower partner.",
   },
 ];
 

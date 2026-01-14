@@ -1,14 +1,26 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+
 import Link from "next/link";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
 
   const pathname = usePathname();
   const isHome = pathname === "/" || pathname === "/home";
+
+  useEffect(() => {
+  const onScroll = () => {
+    setScrolled(window.scrollY > 40);
+  };
+
+  window.addEventListener("scroll", onScroll);
+  return () => window.removeEventListener("scroll", onScroll);
+}, []);
 
   return (
     <>
@@ -16,16 +28,23 @@ export default function Header() {
     {/* ✅ Spacer only for NON-home pages */}
 {!isHome && <div className="h-[80px]" />}
 
- <header
+<header
   className={`
-    w-full top-0 left-0 z-50 text-white py-4
+    w-full top-0 left-0 z-50
+    h-[80px]
+    flex items-center
+    text-white
+    transition-all duration-300
     ${
       isHome
-        ? "absolute inset-x-0 top-0 bg-transparent"
+        ? scrolled
+          ? "fixed bg-[linear-gradient(180deg,#7B2F4E_0%,#6F365F_32%,#5F3F73_68%,#4B3E6D_100%)]"
+          : "absolute bg-transparent border-b-1 border-white"
         : "fixed bg-[linear-gradient(180deg,#7B2F4E_0%,#6F365F_32%,#5F3F73_68%,#4B3E6D_100%)]"
     }
   `}
 >
+
 
       <div
   className="

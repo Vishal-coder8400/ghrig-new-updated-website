@@ -85,24 +85,43 @@
 .hero-wrapper {
   width: 100%;
   position: relative;
-  overflow: hidden;
+
   background-image: url("/assets/images/banner-new-updated1.png");
   background-repeat: no-repeat;
-  background-position: center top;
   background-size: cover;
-  height: 950px;
+  background-position: center center;
+
+  padding-top: 120px;
+  padding-bottom: 160px;
+
+  height: 900px;
 }
 
-
-
-@media screen and (max-width: 768px) {
-  .hero-wrapper-mobile {
+@media (max-width: 768px) {
+  .hero-wrapper {
     background-image: url("/assets/images/banner-main-mobile1.png") !important;
-    background-size: cover;
     background-position: center top;
-    height: 110vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* TOP SAFE GAP (header) */
+    padding-top: 104px;
+
+    /* ⬇️ MORE BOTTOM SPACE (KEY FIX) */
+    padding-bottom: 360px;   /* was 260px */
+
+    /* Allow full height for absolute cards */
+    height: auto;
+    min-height: 1120px;      /* was 980px */
+
+    overflow-x: hidden;
+    overflow-y: visible;
   }
 }
+
+
+
+
 
 @media screen and (max-width:500px) {
   .Accelerate_job {
@@ -418,4 +437,24 @@
 /* Active bullet */
 .swiper-pagination-bullet-active {
   @apply bg-white;
+}
+
+
+/* Hide Swiper arrows completely on mobile */
+/* Hide Swiper arrows on mobile only */
+@media (max-width: 1023px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+/* Clean arrow UI on desktop */
+.swiper-button-prev,
+.swiper-button-next {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #ffffff; /* or brand color */
 }

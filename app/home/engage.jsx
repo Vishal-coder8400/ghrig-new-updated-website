@@ -102,7 +102,51 @@ export const Engage = () => {
                 {role.title}
               </h3>
 
-            
+              <a
+                href={role.href}
+                target="_blank"
+                className="
+                  relative
+                  flex items-center justify-center gap-2
+                  h-[32px] sm:h-[35px]
+                  px-[18px] sm:px-[21px]
+                  rounded-[100px]
+                  text-white
+                  text-[13px] sm:text-sm
+                  font-medium
+                  overflow-hidden
+                  shadow-[0_10px_25px_rgba(0,0,0,0.12)]
+                "
+              >
+                {/* BASE GRADIENT */}
+                <span className="
+                  absolute inset-0
+                  rounded-[100px]
+                  bg-gradient-to-r
+                  from-[#BC263A]
+                  to-[#004A8F]
+                " />
+
+                {/* SOFT OVERLAY */}
+                <span className="
+                  absolute inset-0
+                  rounded-[100px]
+                  bg-[linear-gradient(90deg,rgba(122,46,108,0.65),rgba(75,47,107,0.65))]
+                " />
+
+                {/* BORDER */}
+                <span className="
+                  absolute inset-0
+                  rounded-[100px]
+                  border border-[rgba(142,119,228,0.6)]
+                " />
+
+                {/* CONTENT */}
+                <span className="relative z-10 flex items-center gap-2">
+                  Proceed
+                  <ChevronRightIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                </span>
+              </a>
             </CardContent>
           </Card>
         ))}

@@ -105,22 +105,32 @@ export default function CarouselCard() {
       </p>
 
       <div className="w-full max-w-7xl mt-10 px-4 sm:px-6">
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          slidesPerView={3}
-          spaceBetween={30}
-          loop
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3500 }}
-          breakpoints={{
-            0: { slidesPerView: 1 },
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className="pb-12"
-        >
+<Swiper
+  modules={[Navigation, Pagination, Autoplay]}
+  spaceBetween={30}
+  loop
+  autoplay={{ delay: 3500, disableOnInteraction: false }}
+  pagination={{ clickable: true }}
+  navigation // ✅ enable globally
+  breakpoints={{
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  }}
+  className="pb-12"
+>
+
+
+
           {cards.map((card, index) => (
             <SwiperSlide key={index}>
               <div
