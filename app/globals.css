@@ -439,3 +439,28 @@
   box-shadow: none !important;
   color: #ffffff; /* or brand color */
 }
+
+/* ================================
+   FIX HERO BANNER CLICK ISSUE
+   ================================ */
+
+/* Allow hero containers to receive clicks */
+.hero-wrapper,
+.hero-wrapper-mobile {
+  pointer-events: auto;
+}
+
+/* Make sure clickable overlay zones always stay on top */
+#trainerCard,
+#jobCard,
+#referrerCard,
+#corporateCard,
+#recruiterCard,
+#m1,
+#m2,
+#m3,
+#m4,
+#m5 {
+  pointer-events: auto;
+  z-index: 9999;
+}
