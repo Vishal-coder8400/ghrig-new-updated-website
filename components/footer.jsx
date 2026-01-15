@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FiLinkedin, FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
+import { FiLinkedin, FiInstagram, FiTwitter, FiFacebook, FiYoutube } from "react-icons/fi";
 
 export default function Footer() {
   return (
@@ -73,18 +73,26 @@ export default function Footer() {
               <h3 className="font-bold text-[#1a1819] text-sm lg:text-base tracking-wider uppercase">
                 MORE
               </h3>
-              <ul className="flex flex-col items-start gap-2 self-stretch w-full text-sm lg:text-base">
-                {["Blogs", "FAQs", "Testimonials"].map((item) => (
-                  <li key={item} className="self-stretch">
-                    <Link
-                      href={`/${item.toLowerCase()}`}
-                      className="font-normal text-[#1a1819]  font-semibold  hover:underline"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+           <ul className="flex flex-col items-start gap-2 self-stretch w-full text-sm lg:text-base">
+  {["Blogs", "FAQs", "Testimonials"].map((item) => {
+    const href =
+      item === "Testimonials"
+        ? "/#testimonials"
+        : `/${item.toLowerCase()}`;
+
+    return (
+      <li key={item} className="self-stretch">
+        <Link
+          href={href}
+          className="font-normal text-[#1a1819] font-semibold hover:underline"
+        >
+          {item}
+        </Link>
+      </li>
+    );
+  })}
+</ul>
+
             </nav>
           </div>
 
@@ -96,35 +104,81 @@ export default function Footer() {
 
             <div className="flex flex-col gap-5 text-sm lg:text-base">
               <div className="flex items-center gap-4">
-                <div className="flex gap-4 text-[#1a1819]">
-                   {/* LinkedIn */}
-  <FiLinkedin
-    size={20}
-    className="text-[#1a1819] transition-colors duration-300 hover:text-[#0A66C2]"
-  />
+                <div className="flex items-center gap-4">
+  {/* LinkedIn */}
+  <Link
+    href="https://www.linkedin.com/company/ghrig-people-solutions/"
+    target="_blank"
+    className="p-2 rounded-full transition-all duration-300 hover:bg-[#0A66C2]"
+  >
+    <FiLinkedin
+      size={20}
+      className="text-[#0A66C2] hover:text-white"
+    />
+  </Link>
 
   {/* Instagram */}
-  <FiInstagram
-    size={20}
-    className="text-[#1a1819] transition-colors duration-300 hover:text-[#E1306C]"
-  />
+  <Link
+    href="https://www.instagram.com/ghrig.people.solutions/"
+    target="_blank"
+    className="p-2 rounded-full transition-all duration-300 hover:bg-[#E1306C]"
+  >
+    <FiInstagram
+      size={20}
+      className="text-[#E1306C] hover:text-white"
+    />
+  </Link>
 
   {/* Twitter / X */}
-  <FiTwitter
-    size={20}
-    className="text-[#1a1819] transition-colors duration-300 hover:text-[#1DA1F2]"
-  />
+  <Link
+    href="https://x.com/ghrigsolution"
+    target="_blank"
+    className="p-2 rounded-full transition-all duration-300 hover:bg-[#1DA1F2]"
+  >
+    <FiTwitter
+      size={20}
+      className="text-[#1DA1F2] hover:text-white"
+    />
+  </Link>
 
   {/* Facebook */}
-  <FiFacebook
-    size={20}
-    className="text-[#1a1819] transition-colors duration-300 hover:text-[#1877F2]"
-  />
-                </div>
+  <Link
+    href="https://www.facebook.com/people/gHRig-People-Solutions/61573131050969/"
+    target="_blank"
+    className="p-2 rounded-full transition-all duration-300 hover:bg-[#1877F2]"
+  >
+    <FiFacebook
+      size={20}
+      className="text-[#1877F2] hover:text-white"
+    />
+  </Link>
+
+  {/* YouTube */}
+  <Link
+    href="https://www.youtube.com/@ghrig-people.solutions"
+    target="_blank"
+    className="p-2 rounded-full transition-all duration-300 hover:bg-[#FF0000]"
+  >
+    <FiYoutube
+      size={20}
+      className="text-[#FF0000] hover:text-white"
+    />
+  </Link>
+</div>
+
               </div>
 
               {/* <div className="font-medium text-[#1a1819]">Logo</div> */}
 
+            
+              <div className="text-xs lg:text-sm font-semibold  bg-gradient-to-r
+            from-[#8E2C6D]
+            via-[#7A3FA2]
+            to-[#4B4DB5]
+            bg-clip-text
+            text-transparent">
+               connect@ghrig.com
+              </div>
               <div className="text-xs lg:text-sm font-semibold text-[#1a1819]/80">
                 gHRig People Solutions - Copyright 2026
               </div>
@@ -153,7 +207,10 @@ export default function Footer() {
   
 
     {/* COPYRIGHT */}
-    <p>© 2026 gHRig People Solutions – All rights reserved.</p>
+    <div className="w-full text-center text-xs lg:text-sm font-semibold text-white/80">
+  © 2026 gHRig People Solutions – All rights reserved
+</div>
+
 
   </div>
 </div>

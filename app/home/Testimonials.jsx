@@ -25,7 +25,9 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="w-full py-8 sm:py-10 bg-white">
+    <section 
+    id="testimonials"
+    className="w-full py-8 sm:py-10 bg-white">
       {/* Header */}
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-10 px-4 sm:px-6">
         <h2

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const roles = [
   {
-    title: "Recruiter / Company",
+    title: "gHRig Recruiter",
     desc: "Hire top talent faster",
     slug: "recruiter",
     img: "/assets/images/recruiter-card1.png",
@@ -28,7 +28,7 @@ const roles = [
     img: "/assets/images/referrer-card.png",
   },
   {
-    title: "Corporate HR",
+    title: "Client / Corporate HR",
     desc: "End-to-end hiring solutions",
     slug: "corporate",
     img: "/assets/images/corporate-card.png",
