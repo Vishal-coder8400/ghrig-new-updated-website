@@ -102,37 +102,28 @@ export const Engage = () => {
                 {role.title}
               </h3>
 
-              <a
-                href={role.href}
-                target="_blank"
-                className="
-                  relative
-                  flex items-center justify-center gap-2
-                  h-[32px] sm:h-[35px]
-                  px-[18px] sm:px-[21px]
-                  rounded-[100px]
-                  text-white
-                  text-[13px] sm:text-sm
-                  font-medium
-                  overflow-hidden
-                  shadow-[0_10px_25px_rgba(0,0,0,0.12)]
-                "
-              >
-                {/* BASE GRADIENT */}
-                <span className="
-                  absolute inset-0
-                  rounded-[100px]
-                  bg-gradient-to-r
-                  from-[#BC263A]
-                  to-[#004A8F]
-                " />
+          <a
+  href={
+    role.title === " gHRig Recruiter"
+      ? "https://ghrig-new-update.vercel.app/recruiter/log-in"
+      : role.title === "Client/Corporate"
+      ? "https://ghrig-new-update.vercel.app/corporate/log-in"
+      : "/coming-soon"
+  }
+  className="
+    relative
+    flex items-center justify-center gap-2
+    h-[32px] sm:h-[35px]
+    px-[18px] sm:px-[21px]
+    rounded-[100px]
+    text-white
+    text-[13px] sm:text-sm
+    font-medium
+    overflow-hidden
+    shadow-[0_10px_25px_rgba(0,0,0,0.12)]
+  "
+>
 
-                {/* SOFT OVERLAY */}
-                <span className="
-                  absolute inset-0
-                  rounded-[100px]
-                  bg-[linear-gradient(90deg,rgba(122,46,108,0.65),rgba(75,47,107,0.65))]
-                " />
 
                 {/* BORDER */}
                 <span className="

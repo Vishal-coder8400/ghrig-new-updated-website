@@ -62,10 +62,10 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           <div className="bg-white rounded-full px-3 py-1 shadow-sm">
             <img
-              src="../assets/images/logo.png"
+              src="../assets/images/logonew.jpeg"
               alt="Logo"
-              width={68}
-              height={34}
+              width={72}
+              height={40}
               className="object-contain"
             />
           </div>
@@ -94,7 +94,7 @@ export default function Header() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex gap-3">
-        <Link href="https://job-portal-2026-69gm.vercel.app/super-admin/log-in">
+        <Link href="/get-started">
             <div
               className="
                 relative flex items-center justify-center
@@ -110,7 +110,7 @@ export default function Header() {
               <span className="relative z-10">Get Started</span>
             </div>
           </Link>
-
+{/* 
           <Link
             href="/register"
             className="
@@ -124,7 +124,7 @@ export default function Header() {
             "
           >
             Register
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile Icon */}
