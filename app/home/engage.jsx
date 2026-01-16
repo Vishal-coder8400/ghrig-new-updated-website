@@ -74,7 +74,7 @@ export const Engage = () => {
               flex flex-col
               items-center
               gap-5 sm:gap-6
-              p-5 sm:p-6
+              p-4 sm:p-5
               rounded-2xl
               bg-gradient-to-r
               from-[#8E2C6D]
@@ -86,11 +86,22 @@ export const Engage = () => {
             "
           >
             {/* ICON – NO BG */}
-  <div className="h-[110px] flex items-center justify-center">
+<div className="h-[110px] sm:w-[170px] sm:h-[170px] flex items-start justify-center pt-4 overflow-hidden">
   <img
     src={role.image}
     alt={role.title}
-    className="max-h-[78px] sm:max-h-[88px] w-auto object-contain"
+    className={`
+      w-full h-full object-contain
+      transition-transform duration-300
+      ${
+        role.title === "Trainer" || role.title === "Job Referrers"
+          ? "scale-170"
+          : role.title === "Client/Corporate"
+          ? "scale-85"
+          : "scale-100"
+      }
+      group-hover:scale-110
+    `}
   />
 </div>
 

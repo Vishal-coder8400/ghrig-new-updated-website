@@ -59,17 +59,19 @@ export default function Header() {
 
 
         {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <div className="bg-white rounded-full px-3 py-1 shadow-sm">
-            <img
-              src="../assets/images/logonew.jpeg"
-              alt="Logo"
-              width={72}
-              height={40}
-              className="object-contain"
-            />
-          </div>
-        </Link>
+       {/* Logo */}
+<Link href="/" className="flex items-center justify-center mt-1 sm:mt-0 leading-none">
+  <div className="bg-white rounded-full px-3 py-1 shadow-sm flex items-center justify-center">
+    <img
+      src="../assets/images/logonew.jpeg"
+      alt="Logo"
+      width={72}
+      height={40}
+      className="object-contain block"
+    />
+  </div>
+</Link>
+
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex">
@@ -155,8 +157,8 @@ export default function Header() {
       <Link href="/services" onClick={() => setOpen(false)}>Services we Offer</Link>
       <Link href="/career" onClick={() => setOpen(false)}>Career @gHRig</Link>
       <Link href="/contact_us" onClick={() => setOpen(false)}>Contact Us</Link>
-      <Link href="/login" onClick={() => setOpen(false)}>Login</Link>
-      <Link href="/register" onClick={() => setOpen(false)}>Register</Link>
+      <Link href="/get-started" onClick={() => setOpen(false)}>Get Started</Link>
+      {/* <Link href="/register" onClick={() => setOpen(false)}>Register</Link> */}
     </ul>
   </div>
 )}
