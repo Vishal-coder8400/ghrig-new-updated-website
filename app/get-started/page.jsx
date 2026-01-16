@@ -75,9 +75,9 @@ function RoleCard({ role }) {
    <Link
   href={
     role.slug === "recruiter"
-      ? "https://job-portal-2026-69gm.vercel.app/recruiter/log-in"
+      ? "https://portal.ghrig.in/recruiter/log-in"
       : role.slug === "corporate"
-      ? "https://job-portal-2026-69gm.vercel.app/corporate/log-in"
+      ? "https://portal.ghrig.in/corporate/log-in"
       : "/coming-soon"
   }
   className="

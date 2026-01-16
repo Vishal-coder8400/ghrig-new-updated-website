@@ -16,7 +16,7 @@ const roles = [
   {
     title: " gHRig Recruiter",
     image: "/assets/images/jobRecruiter.png",
-    href: "https://ghrig-new-update.vercel.app/recruiter/log-in",
+    href: "https://portal.ghrig.in/recruiter/log-in",
   },
   {
     title: "Job Referrers",
@@ -26,7 +26,7 @@ const roles = [
   {
     title: "Client/Corporate",
     image: "/assets/images/client.png",
-    href: "https://ghrig-new-update.vercel.app/corporate/log-in",
+    href: "https://portal.ghrig.in/corporate/log-in",
   },
 ];
 
