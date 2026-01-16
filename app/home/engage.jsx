@@ -116,9 +116,9 @@ export const Engage = () => {
           <a
   href={
     role.title === " gHRig Recruiter"
-      ? "https://ghrig-new-update.vercel.app/recruiter/log-in"
+      ? "https://portal.ghrig.in/recruiter/log-in"
       : role.title === "Client/Corporate"
-      ? "https://ghrig-new-update.vercel.app/corporate/log-in"
+      ? "https://portal.ghrig.in/corporate/log-in"
       : "/coming-soon"
   }
   className="
